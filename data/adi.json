@@ -1,0 +1,92 @@
+{
+  "name": "Adi",
+  "goal": "God Knows",
+  "image": "https://i.postimg.cc/G8XvZx0z/adi-mollah.jpg",
+  "trainingDays": 7,
+  "days": [
+    {
+      "name": "Monday - Lower + Delts + Biceps",
+      "exercises": [
+        { "name": "Squats", "sets": "4" },
+        { "name": "Romanian Deadlift", "sets": "3" },
+        { "name": "Leg Extension", "sets": "3" },
+        { "name": "Walking Lunges", "sets": "3" },
+        { "name": "Lateral Raises", "sets": "4" },
+        { "name": "Rear Delt Fly", "sets": "3" },
+        { "name": "EZ Bar Curl", "sets": "3" },
+        { "name": "Hammer Curl", "sets": "3" },
+        { "name": "Dead Hang", "sets": "3", "reps": "30 sec" },
+        { "name": "Hollow Hold", "sets": "3", "reps": "30 sec" }
+      ]
+    },
+    {
+      "name": "Tuesday - Push/Pull Heavy",
+      "exercises": [
+        { "name": "Barbell Bench Press", "sets": "4" },
+        { "name": "Incline Dumbbell Press", "sets": "3" },
+        { "name": "Pec Fly", "sets": "3" },
+        { "name": "Standing Barbell Row", "sets": "4" },
+        { "name": "Wide Grip Lat Pulldown", "sets": "3" },
+        { "name": "Seated Cable Row", "sets": "3" },
+        { "name": "Pushdown", "sets": "3" },
+        { "name": "Push-Ups", "sets": "3" },
+        { "name": "Assisted Dips", "sets": "3" }
+      ]
+    },
+    {
+      "name": "Wednesday - Running + Recovery",
+      "exercises": [
+        { "name": "Option A: 5-8 km easy run", "sets": "1" },
+        { "name": "Option B: Intervals (1 min run / 1 min walk for 30-40 min)", "sets": "1" },
+        { "name": "Mobility", "sets": "1" },
+        { "name": "Stretching", "sets": "1" }
+      ]
+    },
+    {
+      "name": "Thursday - Athletic Lower + Shoulders + Forearms",
+      "exercises": [
+        { "name": "Squats", "sets": "3" },
+        { "name": "Farmer Walk", "sets": "4" },
+        { "name": "Bulgarian Split Squat", "sets": "3" },
+        { "name": "Calf Raises", "sets": "4" },
+        { "name": "Machine Lateral Raise", "sets": "4", "reps": "3x10" },
+        { "name": "Cable Rear Delt", "sets": "3" },
+        { "name": "Wrist Curl / Reverse Curl / Hammer Rotation (Choose 2)", "sets": "3" },
+        { "name": "Hanging Knee Raises", "sets": "3", "reps": "15" },
+        { "name": "Scapular Pull-Ups", "sets": "3", "reps": "10" }
+      ]
+    },
+    {
+      "name": "Friday - Pull + Calisthenics",
+      "exercises": [
+        { "name": "Pull-Ups", "sets": "4" },
+        { "name": "Seated Cable Pull", "sets": "4" },
+        { "name": "Single Arm Lat Pulldown", "sets": "3" },
+        { "name": "Behind Back Cable Curl", "sets": "3" },
+        { "name": "Preacher Curl", "sets": "3" },
+        { "name": "Negative Pull-Ups", "sets": "3", "reps": "5" },
+        { "name": "Australian Rows", "sets": "3", "reps": "12" },
+        { "name": "Plank", "sets": "3", "reps": "1 min" },
+        { "name": "Hanging Leg Raise", "sets": "3", "reps": "12" }
+      ]
+    },
+    {
+      "name": "Saturday - Push + Chest + Triceps",
+      "exercises": [
+        { "name": "Incline Smith Press", "sets": "4", "reps": "6-8" },
+        { "name": "Dumbbell Bench Press", "sets": "3", "reps": "8-10" },
+        { "name": "Cable Chest Press", "sets": "3" },
+        { "name": "One Arm Pushdown", "sets": "3" },
+        { "name": "Overhead Extension", "sets": "3" },
+        { "name": "Dips", "sets": "3" },
+        { "name": "Pike Push-Ups", "sets": "3" }
+      ]
+    },
+    {
+      "name": "Sunday - Long Cardio",
+      "exercises": [
+        { "name": "Mixed Walk/Run (5-8 km, eventually 10-15 km)", "sets": "1" }
+      ]
+    }
+  ]
+}

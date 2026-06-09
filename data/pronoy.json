@@ -1,0 +1,69 @@
+{
+  "name": "Pronoy",
+  "goal": "Muscle Building",
+  "image": "https://i.postimg.cc/grxChDpP/Snapchat-1382530797.jpg",
+  "trainingDays": 6,
+  "days": [
+    {
+      "name": "Monday",
+      "exercises": [
+        { "name": "Bench Press" },
+        { "name": "Incline Bench Press" },
+        { "name": "Flies" },
+        { "name": "Cable Biceps Curl" },
+        { "name": "Hammer Curl" },
+        { "name": "Tricep Pushdown" },
+        { "name": "Skull Crusher" },
+        { "name": "Dips" }
+      ]
+    },
+    {
+      "name": "Tuesday",
+      "exercises": [
+        { "name": "Lat Pulldown" },
+        { "name": "Single Hand Cable Row" },
+        { "name": "Pull Ups" },
+        { "name": "Deadlift" },
+        { "name": "Leg Raises" },
+        { "name": "Rope Crunches" }
+      ]
+    },
+    {
+      "name": "Wednesday",
+      "exercises": [
+        { "name": "Push ur chucci (Flat)" },
+        { "name": "Push Up (Incline)" },
+        { "name": "Push Up (Plyometric)" },
+        { "name": "Flat Bench Press" },
+        { "name": "Incline Bench Press" },
+        { "name": "Shoulder Press" },
+        { "name": "Cable Lateral Raise" },
+        { "name": "Reverse Flys" }
+      ]
+    },
+    {
+      "name": "Thursday",
+      "exercises": [
+        { "name": "Back Squats" },
+        { "name": "Front Squats" },
+        { "name": "Split Squats" },
+        { "name": "Abs Workout" }
+      ]
+    },
+    {
+      "name": "Friday",
+      "exercises": [
+        { "name": "Back Workout" },
+        { "name": "Shoulder Workout" }
+      ]
+    },
+    {
+      "name": "Saturday",
+      "exercises": [
+        { "name": "Push Ups" },
+        { "name": "Pull Ups" },
+        { "name": "Dips" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Prem",
+  "goal": "Hybrid Strength",
+  "image": "https://i.postimg.cc/ygmvhkLt/prem.png",
+  "trainingDays": 5,
+  "days": [
+    {
+      "name": "Day 1 - Lower (Squat Focus)",
+      "exercises": [
+        { "name": "Box Jumps", "sets": "3", "reps": "3" },
+        { "name": "Back Squat", "sets": "4", "reps": "3-4" },
+        { "name": "Bulgarian Split Squat", "sets": "3", "reps": "8 each leg" },
+        { "name": "Incline Bench", "sets": "3", "reps": "8" },
+        { "name": "Bicep Curls", "sets": "2", "reps": "-" },
+        { "name": "Core Work", "sets": "3", "reps": "10" }
+      ]
+    },
+    {
+      "name": "Day 2 - Upper (Bench Focus)",
+      "exercises": [
+        { "name": "Bench Press", "sets": "4", "reps": "4-5" },
+        { "name": "Dips", "sets": "3", "reps": "6-8" },
+        { "name": "Lateral Raise", "sets": "3", "reps": "8-12" },
+        { "name": "Neutral Grip Pull-Ups", "sets": "3", "reps": "-" },
+        { "name": "Cable / Chest Supported Row", "sets": "3", "reps": "12" },
+        { "name": "Face Pulls", "sets": "3", "reps": "15" }
+      ]
+    },
+    {
+      "name": "Day 3 - Cardio",
+      "exercises": [
+        { "name": "Brisk Walk or Jog", "reps": "30-45 min" },
+        { "name": "Rope Waves" },
+        { "name": "Farmer Walk", "sets": "2", "reps": "30-60 sec" }
+      ]
+    },
+    {
+      "name": "Day 4 - Lower (Deadlift Focus)",
+      "exercises": [
+        { "name": "Box Jumps", "sets": "3", "reps": "2" },
+        { "name": "Deadlift", "sets": "4", "reps": "3" },
+        { "name": "Split Squats / Step-Ups", "sets": "3", "reps": "8" },
+        { "name": "Core Work", "sets": "3", "reps": "10" }
+      ]
+    },
+    {
+      "name": "Day 5 - Hybrid Conditioning",
+      "exercises": [
+        { "name": "Pull-Ups", "sets": "4" },
+        { "name": "Push-Ups (Slow Tempo)", "sets": "4" },
+        { "name": "Hanging Leg Raises", "sets": "3", "reps": "10" },
+        { "name": "Intervals", "sets": "6 Rounds", "reps": "20 sec fast / 100 sec walk" }
+      ]
+    }
+  ]
+}

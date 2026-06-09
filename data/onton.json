@@ -1,0 +1,77 @@
+{
+  "name": "Onton",
+  "goal": "Body Recomposition",
+  "image": "https://i.postimg.cc/SjmrFQTp/IMG-4172.jpg",
+  "trainingDays": 6,
+  "days": [
+    {
+      "name": "Day 1 - Upper A",
+      "exercises": [
+        { "name": "Bench Press", "sets": "4", "reps": "4-6" },
+        { "name": "Incline Dumbbell Press", "sets": "2", "reps": "6-8" },
+        { "name": "Weighted Pull-Up", "sets": "3", "reps": "5-8" },
+        { "name": "Chest Supported DB Row", "sets": "2", "reps": "8-12" },
+        { "name": "Cable Fly", "sets": "2", "reps": "12-15" },
+        { "name": "Cable Crunch", "sets": "3", "reps": "10-15" }
+      ]
+    },
+    {
+      "name": "Day 2 - Lower A",
+      "exercises": [
+        { "name": "Box Jump", "sets": "3", "reps": "3" },
+        { "name": "Back Squat", "sets": "4", "reps": "4-6" },
+        { "name": "Romanian Deadlift", "sets": "3", "reps": "6-8" },
+        { "name": "Bulgarian Split Squat", "sets": "2", "reps": "8-10" },
+        { "name": "Standing DB Calf Raise", "sets": "3", "reps": "10-15" },
+        { "name": "Hanging Knee Raise / Leg Raise", "sets": "2", "reps": "8-12" }
+      ]
+    },
+    {
+      "name": "Day 3 - Pull A",
+      "exercises": [
+        { "name": "Chin-Up", "sets": "3", "reps": "5-8" },
+        { "name": "Barbell Row", "sets": "3", "reps": "6-8" },
+        { "name": "One Arm DB Row", "sets": "2", "reps": "8-12" },
+        { "name": "Face Pull", "sets": "2", "reps": "15-20" },
+        { "name": "Incline DB Curl", "sets": "3", "reps": "8-12" },
+        { "name": "Plank Pull Through", "sets": "2", "reps": "10-12" }
+      ]
+    },
+    {
+      "name": "Day 4 - Push B",
+      "exercises": [
+        { "name": "Incline Barbell Press", "sets": "3", "reps": "6-8" },
+        { "name": "Flat Dumbbell Press", "sets": "2", "reps": "8-12" },
+        { "name": "Pec Deck", "sets": "2", "reps": "12-15" },
+        { "name": "Seated DB Shoulder Press", "sets": "3", "reps": "6-10" },
+        { "name": "Cable Lateral Raise", "sets": "3", "reps": "12-20" },
+        { "name": "Rope Pressdown", "sets": "2", "reps": "10-15" },
+        { "name": "Reverse Crunch", "sets": "3", "reps": "12-15" }
+      ]
+    },
+    {
+      "name": "Day 5 - Lower B",
+      "exercises": [
+        { "name": "Box Jump", "sets": "3", "reps": "3" },
+        { "name": "Front Squat", "sets": "3", "reps": "5-8" },
+        { "name": "Walking Lunge", "sets": "2", "reps": "10-12" },
+        { "name": "Single Leg RDL", "sets": "2", "reps": "8-10" },
+        { "name": "Standing DB Calf Raise", "sets": "3", "reps": "12-20" },
+        { "name": "Hanging Leg Raise", "sets": "2", "reps": "8-12" }
+      ]
+    },
+    {
+      "name": "Day 6 - Upper B",
+      "exercises": [
+        { "name": "Paused Bench Press", "sets": "2", "reps": "5-8" },
+        { "name": "Low To High Cable Fly", "sets": "2", "reps": "12-20" },
+        { "name": "Pull-Up / Chin-Up", "sets": "2", "reps": "6-10" },
+        { "name": "Chest Supported DB Row", "sets": "2", "reps": "8-12" },
+        { "name": "Rear Delt Fly", "sets": "2", "reps": "15-20" },
+        { "name": "Hammer Curl", "sets": "2", "reps": "10-15" },
+        { "name": "Overhead Cable Tricep Extension", "sets": "2", "reps": "10-15" },
+        { "name": "Cable Crunch", "sets": "2", "reps": "10-15" }
+      ]
+    }
+  ]
+}

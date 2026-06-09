@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fitness Tracker</title>
+<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+
+<div class="bg-glow glow-1"></div>
+<div class="bg-glow glow-2"></div>
+
+<main class="app">
+
+    <!-- HOME -->
+
+    <section id="homeView" class="view active">
+
+        <div class="hero">
+            <h1>Fitness Tracker</h1>
+            <p>Select a friend</p>
+        </div>
+
+        <div id="friendGrid" class="friend-grid"></div>
+
+    </section>
+
+    <!-- PROFILE -->
+
+    <section id="profileView" class="view">
+
+        <div class="nav">
+            <button id="profileBackBtn">← Home</button>
+        </div>
+
+        <div id="profileContainer"></div>
+
+        <div id="dayGrid" class="day-grid"></div>
+
+    </section>
+
+    <!-- WORKOUT -->
+
+    <section id="workoutView" class="view">
+
+        <div class="nav">
+            <button id="workoutBackBtn">← Friend Profile</button>
+        </div>
+
+        <div id="workoutHeader"></div>
+
+        <div id="exerciseContainer"></div>
+
+    </section>
+
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "name": "Dev",
+  "goal": "Muscle Building",
+  "image": "https://i.postimg.cc/XGSffYfD/DEV.jpg",
+  "trainingDays": 6,
+  "days": [
+    {
+      "name": "Day 1 - Upper",
+      "exercises": [
+        { "name": "Incline Bench Press", "sets": "4", "reps": "6-8", "rest": "2-3 min" },
+        { "name": "Flat Bench Press", "sets": "3", "reps": "8-10", "rest": "2 min" },
+        { "name": "Cable Fly", "sets": "3", "reps": "12-15", "rest": "90 sec" },
+        { "name": "Chest-Supported Row", "sets": "3", "reps": "8-10", "rest": "2 min" },
+        { "name": "Lat Pulldown", "sets": "3", "reps": "8-12", "rest": "2 min" },
+        { "name": "Cable Lateral Raise", "sets": "4", "reps": "12-20", "rest": "60 sec" },
+        { "name": "Rope Pushdown", "sets": "2", "reps": "10-15", "rest": "60 sec" }
+      ]
+    },
+    {
+      "name": "Day 2 - Lower",
+      "exercises": [
+        { "name": "Squat", "sets": "4", "reps": "6-10", "rest": "3 min" },
+        { "name": "Romanian Deadlift", "sets": "3", "reps": "6-8", "rest": "3 min" },
+        { "name": "Leg Press", "sets": "3", "reps": "10-12", "rest": "2 min" },
+        { "name": "Leg Curl", "sets": "3", "reps": "10-15", "rest": "90 sec" },
+        { "name": "Standing Calf Raise", "sets": "4", "reps": "8-12", "rest": "60 sec" },
+        { "name": "Leg Raise", "sets": "3", "reps": "10-15", "rest": "60 sec" }
+      ]
+    },
+    {
+      "name": "Day 3 - Pull",
+      "exercises": [
+        { "name": "Pull-Up", "sets": "4", "reps": "6-8", "rest": "2-3 min" },
+        { "name": "Cable Row", "sets": "4", "reps": "8-10", "rest": "2 min" },
+        { "name": "Neutral-Grip Pulldown", "sets": "3", "reps": "10-12", "rest": "2 min" },
+        { "name": "Reverse Pec Deck", "sets": "4", "reps": "12-20", "rest": "60 sec" },
+        { "name": "Incline Dumbbell Curl", "sets": "3", "reps": "8-12", "rest": "90 sec" },
+        { "name": "Cable Curl", "sets": "3", "reps": "10-15", "rest": "60 sec" }
+      ]
+    },
+    {
+      "name": "Day 4 - Rest / Cardio",
+      "exercises": [
+        { "name": "Brisk Walk / Incline Treadmill", "sets": "2", "reps": "30-45 min", "rest": "As u feel" }
+      ]
+    },
+    {
+      "name": "Day 5 - Upper",
+      "exercises": [
+        { "name": "Incline Dumbbell Press", "sets": "4", "reps": "8-10", "rest": "2 min" },
+        { "name": "Dip", "sets": "3", "reps": "8-12", "rest": "2 min" },
+        { "name": "Pec Deck Fly", "sets": "3", "reps": "12-15", "rest": "90 sec" },
+        { "name": "Machine Shoulder Press", "sets": "3", "reps": "6-10", "rest": "2 min" },
+        { "name": "Cable Lateral Raise", "sets": "4", "reps": "12-20", "rest": "60 sec" },
+        { "name": "Single-Arm Cable Row", "sets": "3", "reps": "10-12", "rest": "90 sec" },
+        { "name": "Overhead Rope Extension", "sets": "2", "reps": "10-15", "rest": "60 sec" }
+      ]
+    },
+    {
+      "name": "Day 6 - Lower",
+      "exercises": [
+        { "name": "Bulgarian Split Squat", "sets": "3", "reps": "8-10", "rest": "2 min" },
+        { "name": "Romanian Deadlift", "sets": "3", "reps": "8-10", "rest": "2 min" },
+        { "name": "Leg Extension", "sets": "3", "reps": "12-15", "rest": "90 sec" },
+        { "name": "Seated Leg Curl", "sets": "3", "reps": "12-15", "rest": "90 sec" },
+        { "name": "Standing Calf Raise", "sets": "4", "reps": "10-15", "rest": "60 sec" },
+        { "name": "Cable Crunch", "sets": "3", "reps": "10-15", "rest": "60 sec" },
+        { "name": "Farmer Walk", "sets": "4", "reps": "20-30m", "rest": "90 sec" }
+      ]
+    }
+  ]
+}
