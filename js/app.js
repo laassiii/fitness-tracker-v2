@@ -1,15 +1,14 @@
-
 /* =====================================
    STATE
 ===================================== */
 let friends = [];
 let selectedFriend = null;
 let selectedDay = null;
+let profileScrollPosition = 0;
 
 /* =====================================
    DOM
 ===================================== */
-
 const homeView = document.getElementById("homeView");
 const profileView = document.getElementById("profileView");
 const workoutView = document.getElementById("workoutView");
@@ -24,75 +23,121 @@ const exerciseContainer = document.getElementById("exerciseContainer");
 /* =====================================
    HELPERS
 ===================================== */
-
-function showView(view){
-
-    [homeView,profileView,workoutView].forEach(v=>{
+function showView(view, scrollTop = true) {
+    [homeView, profileView, workoutView].forEach(v => {
         v.classList.remove("active");
+        v.style.display = "none";
     });
 
     view.classList.add("active");
+    view.style.display = "block";
 
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
-    });
+    if (scrollTop) {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+}
+
+function handleImageError(img) {
+    img.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Crect width='150' height='150' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-size='20'%3ENo Image%3C/text%3E%3C/svg%3E";
+    img.alt = "Image not available";
 }
 
 /* =====================================
    HOME
 ===================================== */
 async function loadFriends() {
+    try {
+        const files = [
+            "data/pronoy.json",
+            "data/prem.json",
+            "data/onton.json",
+            "data/dev.json",
+            "data/adi.json"
+        ];
 
-    const files = [
-        "data/pronoy.json",
-        "data/prem.json",
-        "data/onton.json",
-          "data/dev.json",
-          "data/adi.json"
-    ];
+        const responses = await Promise.all(
+            files.map(file => fetch(file).catch(err => {
+                console.warn(`Failed to load ${file}:`, err);
+                return null;
+            }))
+        );
 
-    const responses = await Promise.all(
-        files.map(file => fetch(file))
-    );
+        friends = await Promise.all(
+            responses.map(async (res, index) => {
+                if (!res || !res.ok) {
+                    console.warn(`Could not load friend data for index ${index}`);
+                    return null;
+                }
+                try {
+                    return await res.json();
+                } catch (e) {
+                    console.warn(`Invalid JSON from ${files[index]}`);
+                    return null;
+                }
+            })
+        );
 
-    friends = await Promise.all(
-        responses.map(res => res.json())
-    );
+        // Filter out any null values from failed loads
+        friends = friends.filter(friend => friend !== null);
+        
+        if (friends.length === 0) {
+            friendGrid.innerHTML = `
+                <div class="empty-state">
+                    <p>No friends data available</p>
+                    <button onclick="loadFriends()">Retry</button>
+                </div>
+            `;
+            return;
+        }
 
-    renderFriends();
+        renderFriends();
+    } catch (error) {
+        console.error("Error loading friends:", error);
+        friendGrid.innerHTML = `
+            <div class="empty-state">
+                <p>Failed to load friends</p>
+                <button onclick="loadFriends()">Retry</button>
+            </div>
+        `;
+    }
 }
-function renderFriends(){
 
+function renderFriends() {
+    if (!friendGrid) return;
+    
     friendGrid.innerHTML = "";
 
-    friends.forEach(friend=>{
+    friends.forEach((friend, index) => {
+        if (!friend) return;
 
         const card = document.createElement("div");
-
         card.className = "friend-card glass";
 
         card.innerHTML = `
-            <img
-                src="${friend.image}"
-                alt="${friend.name}"
-                class="friend-card-image"
-            >
-
+            <div class="friend-card-image-wrapper">
+                <img
+                    src="${friend.image || ''}"
+                    alt="${friend.name || 'Friend'}"
+                    class="friend-card-image"
+                    onerror="handleImageError(this)"
+                    loading="lazy"
+                >
+            </div>
             <div class="friend-card-content">
-
-                <h2>${friend.name}</h2>
-
+                <h2>${friend.name || 'Unknown'}</h2>
                 <div class="friend-card-meta">
-                    <span>${friend.goal}</span>
-                    <span>${friend.trainingDays} Training Days</span>
+                    <span>${friend.goal || 'No goal set'}</span>
+                    <span>${friend.trainingDays || 0} Training Days</span>
                 </div>
-
             </div>
         `;
 
-        card.onclick = ()=>openProfile(friend);
-
+        card.addEventListener("click", () => openProfile(friend));
+        card.style.animationDelay = `${index * 0.1}s`;
+        
         friendGrid.appendChild(card);
     });
 }
@@ -100,89 +145,131 @@ function renderFriends(){
 /* =====================================
    PROFILE
 ===================================== */
-
-function openProfile(friend){
-
+function openProfile(friend) {
+    if (!friend) return;
+    
     selectedFriend = friend;
+    profileScrollPosition = 0;
 
-    profileContainer.innerHTML = `
-        <div class="profile-card glass">
-
-            <img
-                src="${friend.image}"
-                alt="${friend.name}"
-                class="profile-image"
-            >
-
-            <h2>${friend.name}</h2>
-
-            <div class="profile-goal">
-                ${friend.goal}
-            </div>
-
-            <div class="profile-meta">
-                <div>
-                    <strong>Training Days:</strong>
-                    ${friend.trainingDays}
+    if (profileContainer) {
+        profileContainer.innerHTML = `
+            <div class="profile-card glass">
+                <div class="profile-image-wrapper">
+                    <img
+                        src="${friend.image || ''}"
+                        alt="${friend.name || 'Friend'}"
+                        class="profile-image"
+                        onerror="handleImageError(this)"
+                    >
+                </div>
+                <h2>${friend.name || 'Unknown'}</h2>
+                <div class="profile-goal">
+                    ${friend.goal || 'No goal set'}
+                </div>
+                <div class="profile-meta">
+                    <div>
+                        <strong>Training Days:</strong>
+                        ${friend.trainingDays || 0}
+                    </div>
                 </div>
             </div>
-
-        </div>
-    `;
-
-    dayGrid.innerHTML = "";
-
-    friend.days.forEach(day=>{
-
-        const card = document.createElement("div");
-
-        card.className = "day-card glass";
-
-        card.innerHTML = `
-            <h3>${day.name}</h3>
-            <span>${day.exercises.length} Exercises</span>
         `;
+    }
 
-        card.onclick = ()=>openWorkout(day);
+    if (dayGrid) {
+        dayGrid.innerHTML = "";
 
-        dayGrid.appendChild(card);
-    });
+        if (!friend.days || friend.days.length === 0) {
+            dayGrid.innerHTML = `
+                <div class="empty-state">
+                    <p>No training days available</p>
+                </div>
+            `;
+        } else {
+            friend.days.forEach((day, index) => {
+                if (!day) return;
+
+                const card = document.createElement("div");
+                card.className = "day-card glass";
+
+                // Build the card HTML with focus area if available
+                card.innerHTML = `
+                    <div class="day-card-header">
+                        <h3>${day.name || 'Unknown Day'}</h3>
+                        ${day.focus ? `<span class="day-focus-badge">${day.focus}</span>` : ''}
+                    </div>
+                    <div class="day-card-footer">
+                        <span class="day-exercise-count">
+                            <svg class="exercise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 20V10M12 20V4M6 20v-6"/>
+                            </svg>
+                            ${day.exercises ? day.exercises.length : 0} Exercises
+                        </span>
+                    </div>
+                `;
+
+                card.addEventListener("click", () => openWorkout(day));
+                card.style.animationDelay = `${index * 0.1}s`;
+                
+                dayGrid.appendChild(card);
+            });
+        }
+    }
 
     showView(profileView);
+    
+    // Save scroll position when user scrolls
+    window.addEventListener("scroll", saveProfileScrollPosition);
+}
+
+function saveProfileScrollPosition() {
+    if (profileView.classList.contains("active")) {
+        profileScrollPosition = window.scrollY;
+    }
 }
 
 /* =====================================
    WORKOUT
 ===================================== */
-
-function openWorkout(day){
-
+function openWorkout(day) {
+    if (!day || !selectedFriend) return;
+    
     selectedDay = day;
 
-    workoutHeader.innerHTML = `
-        <div class="profile-card glass">
-            <h2>${selectedFriend.name}</h2>
-            <p>${day.name}</p>
-        </div>
-    `;
+    if (workoutHeader) {
+        workoutHeader.innerHTML = `
+            <div class="profile-card glass">
+                <h2>${selectedFriend.name || 'Unknown'}</h2>
+                <p class="workout-day-name">${day.name || 'Unknown Day'}</p>
+                ${day.focus ? `<p class="workout-focus">${day.focus}</p>` : ''}
+            </div>
+        `;
+    }
 
-    exerciseContainer.innerHTML = `
-        <div class="exercise-list">
-            ${day.exercises.map(exercise=>`
-                <div class="exercise-card glass">
-
-                    <h3>${exercise.name}</h3>
-
-                    <div class="exercise-info">
-                        <span>Sets: ${exercise.sets}</span>
-                        <span>Reps: ${exercise.reps}</span>
-                        <span>Rest: ${exercise.rest}</span>
-                    </div>
-
+    if (exerciseContainer) {
+        if (!day.exercises || day.exercises.length === 0) {
+            exerciseContainer.innerHTML = `
+                <div class="empty-state">
+                    <p>No exercises for this day</p>
                 </div>
-            `).join("")}
-        </div>
-    `;
+            `;
+        } else {
+            exerciseContainer.innerHTML = `
+                <div class="exercise-list">
+                    ${day.exercises.map((exercise, index) => `
+                        <div class="exercise-card glass" style="animation-delay: ${index * 0.1}s">
+                            <h3>${exercise.name || 'Unknown Exercise'}</h3>
+                            <div class="exercise-info">
+                                <span>Sets: ${exercise.sets || 0}</span>
+                                <span>Reps: ${exercise.reps || 0}</span>
+                                <span>Rest: ${exercise.rest || '0s'}</span>
+                            </div>
+                        </div>
+                    `).join("")}
+                </div>
+            `;
+        }
+    }
 
     showView(workoutView);
 }
@@ -190,21 +277,25 @@ function openWorkout(day){
 /* =====================================
    NAVIGATION
 ===================================== */
-
-document
-.getElementById("profileBackBtn")
-.addEventListener("click",()=>{
+document.getElementById("profileBackBtn")?.addEventListener("click", () => {
+    window.removeEventListener("scroll", saveProfileScrollPosition);
     showView(homeView);
 });
 
-document
-.getElementById("workoutBackBtn")
-.addEventListener("click",()=>{
-    showView(profileView);
+document.getElementById("workoutBackBtn")?.addEventListener("click", () => {
+    showView(profileView, false);
+    
+    setTimeout(() => {
+        window.scrollTo({
+            top: profileScrollPosition || 0,
+            behavior: "smooth"
+        });
+    }, 100);
 });
 
 /* =====================================
    INIT
 ===================================== */
-
-loadFriends();
+document.addEventListener("DOMContentLoaded", () => {
+    loadFriends();
+});
