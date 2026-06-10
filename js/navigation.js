@@ -65,14 +65,22 @@ var NavigationModule = (function() {
      * Preserves scroll position, updates completion counts
      */
     function goToProfileFromWorkout() {
-        var selectedFriend = window.AppModule ? window.AppModule.getSelectedFriend() : null;
-        
-        if (selectedFriend) {
-            UIModule.updateDayCompletionCounts(selectedFriend);
-        }
-        
-        showView(document.getElementById("profileView"), false);
+    var selectedFriend = window.AppModule ? window.AppModule.getSelectedFriend() : null;
+
+    if (selectedFriend) {
+        UIModule.updateDayCompletionCounts(selectedFriend);
     }
+
+    showView(document.getElementById("profileView"), false);
+
+    var scrollPosition = window.AppModule
+        ? window.AppModule.getProfileScrollPosition()
+        : 0;
+
+    window.scrollTo({
+        top: scrollPosition
+    });
+}
     
     /**
      * Navigate to profile view for a specific friend
