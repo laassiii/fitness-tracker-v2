@@ -276,10 +276,13 @@ body{
 .exercise-card{
     padding:18px;
     border-radius:18px;
-}
 
-.exercise-card h3{
-    margin-bottom:10px;
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
 }
 
 .exercise-info{
@@ -476,10 +479,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 28px;
-    width: 28px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    height: 32px;
+    width: 32px;
+
+    background: rgba(255,255,255,.18);
+
+    border: 2px solid rgba(255,255,255,.35);
+
+    box-shadow: 0 0 12px rgba(0,0,0,.2);
+
     border-radius: 8px;
     transition: all 0.2s ease;
     position: relative;
@@ -508,12 +516,15 @@ body{
 .exercise-checkbox:checked ~ .checkmark {
     background: var(--accent);
     border-color: var(--accent);
+
+    box-shadow:
+        0 0 18px rgba(94,234,212,.45);
 }
 
 /* Hover state */
 .exercise-checkbox-label:hover .checkmark {
     border-color: var(--accent);
-    background: rgba(94, 234, 212, 0.15);
+    background: rgba(94, 234, 212, 0.25);
 }
 
 .exercise-checkbox-label:hover .exercise-checkbox:checked ~ .checkmark {
