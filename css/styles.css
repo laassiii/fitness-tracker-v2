@@ -1,5 +1,5 @@
 :root{
-    --bg:#111827;
+    --bg:#172554;
     --glass:rgba(255,255,255,.12);
     --glass-border:rgba(255,255,255,.12);
     --text:#fff;
@@ -325,12 +325,12 @@ body{
     position:fixed;
     border-radius:50%;
     filter:blur(120px);
-    opacity:.35;
+    opacity:.55;
     pointer-events:none;
 }
 
 .glow-1{
-    width:300px;
+    width:400px;
     height:300px;
     background:var(--accent);
     top:-100px;
