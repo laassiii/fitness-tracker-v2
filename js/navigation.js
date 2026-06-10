@@ -93,7 +93,13 @@ var NavigationModule = (function() {
             window.AppModule.setProfileScrollPosition(0);
         }
         
-        UIModule.openProfile(friend);
+       history.pushState(
+    { view: "profile" },
+    "",
+    "#profile"
+);
+
+UIModule.openProfile(friend);
     }
     
     /**
@@ -106,9 +112,31 @@ var NavigationModule = (function() {
             window.AppModule.setSelectedDay(day);
         }
         
-        WorkoutModule.openWorkout(day);
+        history.pushState(
+    { view: "workout" },
+    "",
+    "#workout"
+);
+
+WorkoutModule.openWorkout(day);
+
     }
-    
+    window.addEventListener("popstate", function() {
+
+    var workoutView = document.getElementById("workoutView");
+    var profileView = document.getElementById("profileView");
+
+    if (workoutView.classList.contains("active")) {
+        goToProfileFromWorkout();
+        return;
+    }
+
+    if (profileView.classList.contains("active")) {
+        goToHomeFromProfile();
+        return;
+    }
+    });
+
     /* =====================================
        PUBLIC API
     ===================================== */
