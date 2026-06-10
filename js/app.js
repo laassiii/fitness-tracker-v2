@@ -1,7 +1,7 @@
 /* =====================================
    APP MODULE
-   Global state, DOM references,
-   data loading, events, initialization
+   Application state, initialization,
+   data loading, module wiring
 ===================================== */
 
 var AppModule = (function() {
@@ -13,20 +13,6 @@ var AppModule = (function() {
     var selectedFriend = null;
     var selectedDay = null;
     var profileScrollPosition = 0;
-
-    /* =====================================
-       DOM REFERENCES
-    ===================================== */
-    var homeView;
-    var profileView;
-    var workoutView;
-    var friendGrid;
-    var profileContainer;
-    var dayGrid;
-    var workoutHeader;
-    var exerciseContainer;
-    var profileBackBtn;
-    var workoutBackBtn;
 
     /* =====================================
        DATA LOADING
@@ -65,10 +51,11 @@ var AppModule = (function() {
                 })
             );
 
-            // Filter out any null values from failed loads
             friends = parsedFriends.filter(function(friend) {
                 return friend !== null;
             });
+            
+            var friendGrid = document.getElementById("friendGrid");
             
             if (friends.length === 0) {
                 if (friendGrid) {
@@ -84,6 +71,7 @@ var AppModule = (function() {
             UIModule.renderFriends(friends);
         } catch (error) {
             console.error("Error loading friends:", error);
+            var friendGrid = document.getElementById("friendGrid");
             if (friendGrid) {
                 friendGrid.innerHTML = 
                     '<div class="empty-state">' +
@@ -120,52 +108,32 @@ var AppModule = (function() {
     function getProfileScrollPosition() {
         return profileScrollPosition;
     }
-
-    /* =====================================
-       NAVIGATION EVENT HANDLERS
-    ===================================== */
-    function onProfileBackClick() {
-        window.removeEventListener("scroll", UIModule.saveProfileScrollPosition);
-        UIModule.showView(homeView);
-    }
-
-    function onWorkoutBackClick() {
-        UIModule.showView(profileView, false);
-        
-        setTimeout(function() {
-            window.scrollTo({
-                top: profileScrollPosition || 0,
-                behavior: "smooth"
-            });
-        }, 100);
+    
+    function getFriends() {
+        return friends;
     }
 
     /* =====================================
        INITIALIZATION
     ===================================== */
     function init() {
-        // Cache DOM references
-        homeView = document.getElementById("homeView");
-        profileView = document.getElementById("profileView");
-        workoutView = document.getElementById("workoutView");
-        friendGrid = document.getElementById("friendGrid");
-        profileContainer = document.getElementById("profileContainer");
-        dayGrid = document.getElementById("dayGrid");
-        workoutHeader = document.getElementById("workoutHeader");
-        exerciseContainer = document.getElementById("exerciseContainer");
-        profileBackBtn = document.getElementById("profileBackBtn");
-        workoutBackBtn = document.getElementById("workoutBackBtn");
+        // Attach event listeners for back buttons
+        var profileBackBtn = document.getElementById("profileBackBtn");
+        var workoutBackBtn = document.getElementById("workoutBackBtn");
 
-        // Attach event listeners
         if (profileBackBtn) {
-            profileBackBtn.addEventListener("click", onProfileBackClick);
+            profileBackBtn.addEventListener("click", function() {
+                NavigationModule.goToHomeFromProfile();
+            });
         }
 
         if (workoutBackBtn) {
-            workoutBackBtn.addEventListener("click", onWorkoutBackClick);
+            workoutBackBtn.addEventListener("click", function() {
+                NavigationModule.goToProfileFromWorkout();
+            });
         }
 
-        // Load data
+        // Load friend data
         loadFriends();
     }
 
@@ -181,7 +149,7 @@ var AppModule = (function() {
         setSelectedDay: setSelectedDay,
         setProfileScrollPosition: setProfileScrollPosition,
         getProfileScrollPosition: getProfileScrollPosition,
-        getFriends: function() { return friends; }
+        getFriends: getFriends
     };
     
 })();
