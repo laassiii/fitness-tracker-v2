@@ -20,11 +20,11 @@ var AppModule = (function() {
     async function loadFriends() {
         try {
             var files = [
-                "data/pronoy.json",
-                "data/prem.json",
-                "data/onton.json",
-                "data/dev.json",
-                "data/adi.json"
+                "data/friends/pronoy.json",
+                "data/friends/prem.json",
+                "data/friends/onton.json",
+                "data/friends/dev.json",
+                "data/friends/adi.json"
             ];
 
             var responses = await Promise.all(
