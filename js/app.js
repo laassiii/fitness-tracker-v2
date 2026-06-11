@@ -160,3 +160,19 @@ var AppModule = (function() {
 document.addEventListener("DOMContentLoaded", function() {
     AppModule.init();
 });
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+document
+    .getElementById("homeWorkoutsCard")
+    .addEventListener("click", function () {
+        console.log("Home Workouts Clicked");
+    });
+
+document
+    .getElementById("fitnessMythsCard")
+    .addEventListener("click", function () {
+        console.log("Fitness Myths Clicked");
+    });
