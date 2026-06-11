@@ -180,5 +180,19 @@ document
 document
     .getElementById("selectFriendCard")
     .addEventListener("click", function () {
-        console.log("Select Friend Clicked");
+
+        NavigationModule.showView(
+            document.getElementById("friendsView")
+        );
+
+    });
+
+    document
+    .getElementById("friendsBackBtn")
+    .addEventListener("click", function () {
+
+        NavigationModule.showView(
+            document.getElementById("homeView")
+        );
+
     });

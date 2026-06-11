@@ -16,6 +16,7 @@ var NavigationModule = (function() {
         
         var allViews = [
             document.getElementById("homeView"),
+            document.getElementById("friendsView"),
             document.getElementById("profileView"),
             document.getElementById("workoutView")
         ];
@@ -57,7 +58,7 @@ var NavigationModule = (function() {
      */
     function goToHomeFromProfile() {
         window.removeEventListener("scroll", saveProfileScrollPosition);
-        showView(document.getElementById("homeView"));
+        showView(document.getElementById("friendsView"));
     }
     
     /**
