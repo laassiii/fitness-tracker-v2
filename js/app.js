@@ -166,13 +166,19 @@ document.addEventListener("DOMContentLoaded", function() {
 ========================= */
 
 document
-    .getElementById("homeWorkoutsCard")
+    .getElementById("homeWorkoutsBtn")
     .addEventListener("click", function () {
         console.log("Home Workouts Clicked");
     });
 
 document
-    .getElementById("fitnessMythsCard")
+    .getElementById("fitnessMythsBtn")
     .addEventListener("click", function () {
         console.log("Fitness Myths Clicked");
+    });
+
+document
+    .getElementById("selectFriendCard")
+    .addEventListener("click", function () {
+        console.log("Select Friend Clicked");
     });
