@@ -1,0 +1,6 @@
+{
+  "name": "@fitness/web", "private": true, "type": "module",
+  "scripts": { "dev": "vite --host 127.0.0.1", "build": "vite build", "typecheck": "svelte-check --tsconfig ./tsconfig.json", "test": "vitest run --passWithNoTests" },
+  "dependencies": { "svelte": "^5.57.1" },
+  "devDependencies": { "@sveltejs/vite-plugin-svelte": "latest", "svelte-check": "latest", "typescript": "latest", "vite": "^8.3.2", "vitest": "latest" }
+}

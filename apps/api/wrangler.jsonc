@@ -1,0 +1,8 @@
+{
+  "name": "fitness-tracker-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-05",
+  "workers_dev": true,
+  "observability": { "enabled": true },
+  "vars": { "SUPABASE_URL": "https://iewlobsbtwovcgpalgva.supabase.co" }
+}

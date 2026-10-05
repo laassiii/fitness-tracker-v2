@@ -1,0 +1,13 @@
+{
+  "name": "fitness-tracker",
+  "private": true,
+  "type": "module",
+  "workspaces": ["apps/web", "apps/api"],
+  "scripts": {
+    "dev": "npm run dev -w apps/web",
+    "typecheck": "npm run typecheck --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "engines": { "node": ">=22.12" }
+}
