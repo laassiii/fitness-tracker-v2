@@ -48,3 +48,21 @@ All paths start with `/api/v1`. Fitness endpoints require a verified Supabase ac
 ## Remaining API work
 
 Signup, verification, logout/recovery, consent gating, template-to-plan copying, optimistic version checks, detailed progress windows, and rate limiting are not completed at this milestone. These routes must not be represented as finished or deployed. Sets prevent duplicates with position and optional UUID constraints; returning the existing response for a retried set write is still a follow-up. No frontend workflow is wired to these routes yet.
+
+## Local workflow endpoint additions
+
+These additions are local, not deployed. Fitness endpoints now require recorded acceptance of the current Terms and Privacy versions.
+
+| Method | Path | Contract |
+|---|---|---|
+| GET | /legal | Public current document type/version/hash/content |
+| POST | /auth/signup | email, password (12+ characters), accepted: true, versions: terms/privacy; verification email required; unchecked consent in UI |
+| POST | /auth/verify | token_hash and type email/recovery; memory access token plus refresh cookie |
+| POST | /auth/logout | Verified bearer when available; revoke current refresh session and clear cookie |
+| POST | /auth/recover | email; generic recovery message |
+| POST | /auth/password | Verified bearer plus new password (12+ characters) |
+| GET, POST | /me/consents | Current documents/acceptance; POST accepted: true and exact versions; server timestamps |
+| POST | /plans/from-template | template_id, name, idempotency_key UUID; atomic owner plan copy |
+| POST | /session-exercises/:id/sets | Required stable UUID id, position, reps, weight_kg, optional type/RPE/notes; identical retry returns saved row; changed retry 409 |
+
+The earlier Remaining API work paragraph is superseded for signup, verification, logout/recovery, consent, template copying, set retries and frontend wiring. Optimistic plan version checks, detailed progress windows, deployed rate limiting and production validation remain outstanding. Optional body measurement fields can be cleared with explicit null.

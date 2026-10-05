@@ -2,12 +2,25 @@
   "name": "fitness-tracker",
   "private": true,
   "type": "module",
-  "workspaces": ["apps/web", "apps/api"],
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
   "scripts": {
     "dev": "npm run dev -w apps/web",
+    "dev:api": "npm run dev -w apps/api",
+    "local:configure": "node scripts/configure-local.mjs",
+    "test:browser": "playwright test",
     "typecheck": "npm run typecheck --workspaces",
     "build": "npm run build --workspaces",
     "test": "npm run test --workspaces"
   },
-  "engines": { "node": ">=22.12" }
+  "engines": {
+    "node": ">=22.12"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "prettier": "^3.9.9",
+    "prettier-plugin-svelte": "^4.1.1"
+  }
 }

@@ -29,6 +29,11 @@ jobs:
         run: npm run test -w apps/api
         env:
           RUN_LOCAL_INTEGRATION: '1'
+      - name: Configure and test local browser workflows
+        run: |
+          npm run local:configure
+          npx playwright install --with-deps chromium
+          npm run test:browser
       - name: Stop local test stack
         if: always()
         run: npx --yes supabase@2.119.0 stop --no-backup --agent no --output-format text

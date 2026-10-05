@@ -34,3 +34,7 @@
 - https://developers.cloudflare.com/workers/platform/limits/
 - https://supabase.com/docs/guides/auth/server-side/advanced-guide
 - https://vite.dev/guide/
+
+## Local workflows milestone (supersedes earlier unfinished-work notes)
+
+All core local frontend workflows are now wired and tested; see `local-workflows.md` for setup, evidence and outstanding production gates. Signup, verification, recovery, logout, consent gating and template copying are implemented locally. No new migration was applied remotely and no application deployment occurred. New migrations 004/005 add atomic template/set operations, legal content and the narrowly scoped signup-consent trigger; previously accepted migrations remain unchanged. The privileged Auth insert trigger is documented separately from ordinary invoker RPCs and user-JWT PostgREST requests.
