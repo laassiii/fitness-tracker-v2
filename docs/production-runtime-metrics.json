@@ -1,0 +1,650 @@
+[
+  {
+    "timestamp": 1791224282215,
+    "route": "/api/v1/me",
+    "method": "GET",
+    "cpu_ms": 0,
+    "worker_wall_ms": 1,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224282088,
+    "route": "/api/v1/health",
+    "method": "GET",
+    "cpu_ms": 0,
+    "worker_wall_ms": 1,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224282274,
+    "route": "/api/v1/legal",
+    "method": "GET",
+    "cpu_ms": 1,
+    "worker_wall_ms": 690,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224289011,
+    "route": "/api/v1/me/consents",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 1102,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224290691,
+    "route": "/api/v1/me/consents",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 788,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224291530,
+    "route": "/api/v1/me",
+    "method": "GET",
+    "cpu_ms": 1,
+    "worker_wall_ms": 142,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224291733,
+    "route": "/api/v1/me/profile",
+    "method": "PUT",
+    "cpu_ms": 3,
+    "worker_wall_ms": 602,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224292385,
+    "route": "/api/v1/me/profile",
+    "method": "PUT",
+    "cpu_ms": 2,
+    "worker_wall_ms": 616,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224293055,
+    "route": "/api/v1/me/profile",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 614,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224293725,
+    "route": "/api/v1/plans",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 865,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224294707,
+    "route": "/api/v1/plans/REDACTED",
+    "method": "GET",
+    "cpu_ms": 8,
+    "worker_wall_ms": 1572,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224296348,
+    "route": "/api/v1/plans/REDACTED/days",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 786,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224297181,
+    "route": "/api/v1/exercises",
+    "method": "GET",
+    "cpu_ms": 4,
+    "worker_wall_ms": 770,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224298012,
+    "route": "/api/v1/days/REDACTED/exercises",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 940,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224299004,
+    "route": "/api/v1/sessions",
+    "method": "POST",
+    "cpu_ms": 6,
+    "worker_wall_ms": 962,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224300016,
+    "route": "/api/v1/sessions/REDACTED",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 789,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224300849,
+    "route": "/api/v1/session-exercises/REDACTED/sets",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 1379,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224302268,
+    "route": "/api/v1/body-metrics",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 651,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224302976,
+    "route": "/api/v1/body-metrics/REDACTED",
+    "method": "PATCH",
+    "cpu_ms": 3,
+    "worker_wall_ms": 770,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224303804,
+    "route": "/api/v1/body-metrics/REDACTED",
+    "method": "GET",
+    "cpu_ms": 3,
+    "worker_wall_ms": 764,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224304614,
+    "route": "/api/v1/me/consents",
+    "method": "GET",
+    "cpu_ms": 1,
+    "worker_wall_ms": 449,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224305106,
+    "route": "/api/v1/me",
+    "method": "GET",
+    "cpu_ms": 0,
+    "worker_wall_ms": 169,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224305330,
+    "route": "/api/v1/me/profile",
+    "method": "PUT",
+    "cpu_ms": 2,
+    "worker_wall_ms": 679,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224306067,
+    "route": "/api/v1/me/profile",
+    "method": "PUT",
+    "cpu_ms": 2,
+    "worker_wall_ms": 945,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224307975,
+    "route": "/api/v1/plans",
+    "method": "POST",
+    "cpu_ms": 2,
+    "worker_wall_ms": 606,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224308700,
+    "route": "/api/v1/plans/REDACTED",
+    "method": "GET",
+    "cpu_ms": 6,
+    "worker_wall_ms": 1877,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224310628,
+    "route": "/api/v1/plans/REDACTED/days",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 777,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224311459,
+    "route": "/api/v1/exercises",
+    "method": "GET",
+    "cpu_ms": 4,
+    "worker_wall_ms": 1019,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224312536,
+    "route": "/api/v1/days/REDACTED/exercises",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 926,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224313515,
+    "route": "/api/v1/sessions",
+    "method": "POST",
+    "cpu_ms": 6,
+    "worker_wall_ms": 915,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224314484,
+    "route": "/api/v1/sessions/REDACTED",
+    "method": "GET",
+    "cpu_ms": 3,
+    "worker_wall_ms": 751,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224315294,
+    "route": "/api/v1/session-exercises/REDACTED/sets",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 1062,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224316398,
+    "route": "/api/v1/body-metrics",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 604,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224317065,
+    "route": "/api/v1/body-metrics/REDACTED",
+    "method": "PATCH",
+    "cpu_ms": 2,
+    "worker_wall_ms": 776,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224317893,
+    "route": "/api/v1/body-metrics/REDACTED",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 879,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224318820,
+    "route": "/api/v1/me/consents",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 455,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224322426,
+    "route": "/api/v1/plans/REDACTED",
+    "method": "GET",
+    "cpu_ms": 3,
+    "worker_wall_ms": 862,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224323408,
+    "route": "/api/v1/sessions/REDACTED",
+    "method": "GET",
+    "cpu_ms": 3,
+    "worker_wall_ms": 597,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224324051,
+    "route": "/api/v1/body-metrics/REDACTED",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 605,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224324711,
+    "route": "/api/v1/me/profile",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 448,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224325211,
+    "route": "/api/v1/me/consents",
+    "method": "GET",
+    "cpu_ms": 1,
+    "worker_wall_ms": 457,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224325710,
+    "route": "/api/v1/me/consents",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 689,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224326454,
+    "route": "/api/v1/me/profile",
+    "method": "PUT",
+    "cpu_ms": 2,
+    "worker_wall_ms": 476,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224326979,
+    "route": "/api/v1/plans",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 452,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224332403,
+    "route": "/api/v1/sessions/REDACTED",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 611,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224331331,
+    "route": "/api/v1/plans/REDACTED",
+    "method": "GET",
+    "cpu_ms": 4,
+    "worker_wall_ms": 939,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224333064,
+    "route": "/api/v1/body-metrics/REDACTED",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 630,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224333750,
+    "route": "/api/v1/me/profile",
+    "method": "GET",
+    "cpu_ms": 1,
+    "worker_wall_ms": 426,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224334231,
+    "route": "/api/v1/me/consents",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 483,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224334762,
+    "route": "/api/v1/me/consents",
+    "method": "GET",
+    "cpu_ms": 1,
+    "worker_wall_ms": 456,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224335275,
+    "route": "/api/v1/me/profile",
+    "method": "PUT",
+    "cpu_ms": 2,
+    "worker_wall_ms": 452,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224335776,
+    "route": "/api/v1/plans",
+    "method": "POST",
+    "cpu_ms": 2,
+    "worker_wall_ms": 442,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224336717,
+    "route": "/api/v1/sessions",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 1237,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224338001,
+    "route": "/api/v1/sessions/REDACTED/complete",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 922,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224338962,
+    "route": "/api/v1/sessions/REDACTED/complete",
+    "method": "POST",
+    "cpu_ms": 2,
+    "worker_wall_ms": 612,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224339636,
+    "route": "/api/v1/sets/REDACTED",
+    "method": "PATCH",
+    "cpu_ms": 3,
+    "worker_wall_ms": 930,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224340613,
+    "route": "/api/v1/session-exercises/REDACTED/sets",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 947,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224341606,
+    "route": "/api/v1/session-exercises/REDACTED/sets",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 1095,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224342747,
+    "route": "/api/v1/days/REDACTED",
+    "method": "PATCH",
+    "cpu_ms": 3,
+    "worker_wall_ms": 793,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224343599,
+    "route": "/api/v1/sessions/REDACTED",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 784,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224344441,
+    "route": "/api/v1/history",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 638,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224345137,
+    "route": "/api/v1/progress",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 626,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224345819,
+    "route": "/api/v1/sessions",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 956,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224346902,
+    "route": "/api/v1/sessions/REDACTED/complete",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 905,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224347856,
+    "route": "/api/v1/sessions/REDACTED/complete",
+    "method": "POST",
+    "cpu_ms": 2,
+    "worker_wall_ms": 640,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224348556,
+    "route": "/api/v1/sets/REDACTED",
+    "method": "PATCH",
+    "cpu_ms": 4,
+    "worker_wall_ms": 1167,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224349768,
+    "route": "/api/v1/session-exercises/REDACTED/sets",
+    "method": "POST",
+    "cpu_ms": 3,
+    "worker_wall_ms": 1249,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224351074,
+    "route": "/api/v1/session-exercises/REDACTED/sets",
+    "method": "POST",
+    "cpu_ms": 4,
+    "worker_wall_ms": 1028,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224352159,
+    "route": "/api/v1/days/REDACTED",
+    "method": "PATCH",
+    "cpu_ms": 3,
+    "worker_wall_ms": 782,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224353000,
+    "route": "/api/v1/sessions/REDACTED",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 815,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224353873,
+    "route": "/api/v1/history",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 897,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  },
+  {
+    "timestamp": 1791224354822,
+    "route": "/api/v1/progress",
+    "method": "GET",
+    "cpu_ms": 2,
+    "worker_wall_ms": 624,
+    "outcome": "ok",
+    "version": "466e01bd-45c7-4d9c-b5e6-fdfc20460f1a"
+  }
+]
