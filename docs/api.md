@@ -2,39 +2,39 @@
 
 All paths start with `/api/v1`. Fitness endpoints require a verified Supabase access token in `Authorization: Bearer …`. Responses are JSON and `Cache-Control: no-store`. Errors contain `code`, `message`, `request_id`; provider/database details are suppressed. No ordinary request receives a privileged credential.
 
-| Method | Path | Request / response |
-|---|---|---|
-| GET | /health | Public liveness only; does not claim database availability |
-| POST | /auth/login | Email/password; memory access token and HttpOnly refresh cookie; strict Origin |
-| POST | /auth/refresh | Empty object, refresh cookie; rotated session; strict Origin |
-| GET | /me | Verified identity only |
-| GET, PUT | /me/profile | Handle/display name/bio; owner context |
-| GET, PUT | /me/preferences | kg/lb, timezone |
-| GET | /me/privacy | Private-only Phase 1 defaults |
-| GET | /exercises | Global catalog and own custom exercises, capped at 200 each |
-| POST | /custom-exercises | Name, optional muscle/equipment/instructions |
-| GET, PATCH | /custom-exercises/:id | Own exercise; name/metadata/archive timestamp |
-| GET | /templates | Generic templates/exercises/targets, capped at 50 |
-| GET, POST | /plans | Cursor page / name and description |
-| GET, PATCH | /plans/:id | Own nested plan / name, description, archive timestamp |
-| POST | /plans/:id/days | Name, position |
-| PATCH, DELETE | /days/:id | Own day; name/position; history retains snapshot |
-| POST | /days/:id/exercises | Exactly one global/custom exercise id; position, notes |
-| PATCH, DELETE | /planned-exercises/:id | Position/notes or remove from current plan |
-| POST | /planned-exercises/:id/targets | Position, optional reps/weight_kg/rest_seconds |
-| PATCH, DELETE | /targets/:id | Edit/remove own target |
-| GET, POST | /sessions | Cursor page; start with day_id or name and required UUID idempotency_key |
-| GET | /sessions/:id | Own historical snapshot with exercises and actual sets |
-| POST | /sessions/:id/exercises | Add an exercise to an open workout |
-| POST | /session-exercises/:id/sets | Position, reps, weight_kg; optional UUID id, RPE, type, notes |
-| PATCH, DELETE | /sets/:id | Edit/remove own set only while session is open |
-| POST | /sessions/:id/complete | Empty object; close session; repeat completion returns existing state |
-| POST | /sessions/:id/discard | Empty object; discard session |
-| GET | /history | Completed sessions, bounded cursor page |
-| GET | /progress | Up to 500 recent server-derived session/exercise observations |
-| GET | /personal-records | Derived heaviest working set, most reps, estimated 1RM; capped at 200 exercises |
-| GET, POST | /body-metrics | Cursor page / at least one optional measurement |
-| GET, PATCH, DELETE | /body-metrics/:id | Own measurement; observed_at/weight/body-fat/waist/chest/notes |
+| Method             | Path                           | Request / response                                                              |
+| ------------------ | ------------------------------ | ------------------------------------------------------------------------------- |
+| GET                | /health                        | Public liveness only; does not claim database availability                      |
+| POST               | /auth/login                    | Email/password; memory access token and HttpOnly refresh cookie; strict Origin  |
+| POST               | /auth/refresh                  | Empty object, refresh cookie; rotated session; strict Origin                    |
+| GET                | /me                            | Verified identity only                                                          |
+| GET, PUT           | /me/profile                    | Handle/display name/bio; owner context                                          |
+| GET, PUT           | /me/preferences                | kg/lb, timezone                                                                 |
+| GET                | /me/privacy                    | Private-only Phase 1 defaults                                                   |
+| GET                | /exercises                     | Global catalog and own custom exercises, capped at 200 each                     |
+| POST               | /custom-exercises              | Name, optional muscle/equipment/instructions                                    |
+| GET, PATCH         | /custom-exercises/:id          | Own exercise; name/metadata/archive timestamp                                   |
+| GET                | /templates                     | Generic templates/exercises/targets, capped at 50                               |
+| GET, POST          | /plans                         | Cursor page / name and description                                              |
+| GET, PATCH         | /plans/:id                     | Own nested plan / name, description, archive timestamp                          |
+| POST               | /plans/:id/days                | Name, position                                                                  |
+| PATCH, DELETE      | /days/:id                      | Own day; name/position; history retains snapshot                                |
+| POST               | /days/:id/exercises            | Exactly one global/custom exercise id; position, notes                          |
+| PATCH, DELETE      | /planned-exercises/:id         | Position/notes or remove from current plan                                      |
+| POST               | /planned-exercises/:id/targets | Position, optional reps/weight_kg/rest_seconds                                  |
+| PATCH, DELETE      | /targets/:id                   | Edit/remove own target                                                          |
+| GET, POST          | /sessions                      | Cursor page; start with day_id or name and required UUID idempotency_key        |
+| GET                | /sessions/:id                  | Own historical snapshot with exercises and actual sets                          |
+| POST               | /sessions/:id/exercises        | Add an exercise to an open workout                                              |
+| POST               | /session-exercises/:id/sets    | Position, reps, weight_kg; optional UUID id, RPE, type, notes                   |
+| PATCH, DELETE      | /sets/:id                      | Edit/remove own set only while session is open                                  |
+| POST               | /sessions/:id/complete         | Empty object; close session; repeat completion returns existing state           |
+| POST               | /sessions/:id/discard          | Empty object; discard session                                                   |
+| GET                | /history                       | Completed sessions, bounded cursor page                                         |
+| GET                | /progress                      | Up to 500 recent server-derived session/exercise observations                   |
+| GET                | /personal-records              | Derived heaviest working set, most reps, estimated 1RM; capped at 200 exercises |
+| GET, POST          | /body-metrics                  | Cursor page / at least one optional measurement                                 |
+| GET, PATCH, DELETE | /body-metrics/:id              | Own measurement; observed_at/weight/body-fat/waist/chest/notes                  |
 
 ## Authorization and validation
 
@@ -53,16 +53,20 @@ Signup, verification, logout/recovery, consent gating, template-to-plan copying,
 
 These additions are local, not deployed. Fitness endpoints now require recorded acceptance of the current Terms and Privacy versions.
 
-| Method | Path | Contract |
-|---|---|---|
-| GET | /legal | Public current document type/version/hash/content |
-| POST | /auth/signup | email, password (12+ characters), accepted: true, versions: terms/privacy; verification email required; unchecked consent in UI |
-| POST | /auth/verify | token_hash and type email/recovery; memory access token plus refresh cookie |
-| POST | /auth/logout | Verified bearer when available; revoke current refresh session and clear cookie |
-| POST | /auth/recover | email; generic recovery message |
-| POST | /auth/password | Verified bearer plus new password (12+ characters) |
-| GET, POST | /me/consents | Current documents/acceptance; POST accepted: true and exact versions; server timestamps |
-| POST | /plans/from-template | template_id, name, idempotency_key UUID; atomic owner plan copy |
-| POST | /session-exercises/:id/sets | Required stable UUID id, position, reps, weight_kg, optional type/RPE/notes; identical retry returns saved row; changed retry 409 |
+| Method    | Path                        | Contract                                                                                                                          |
+| --------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| GET       | /legal                      | Public current document type/version/hash/content                                                                                 |
+| POST      | /auth/signup                | email, password (12+ characters), accepted: true, versions: terms/privacy; verification email required; unchecked consent in UI   |
+| POST      | /auth/verify                | token_hash and type email/recovery; memory access token plus refresh cookie                                                       |
+| POST      | /auth/logout                | Verified bearer when available; revoke current refresh session and clear cookie                                                   |
+| POST      | /auth/recover               | email; generic recovery message                                                                                                   |
+| POST      | /auth/password              | Verified bearer plus new password (12+ characters)                                                                                |
+| GET, POST | /me/consents                | Current documents/acceptance; POST accepted: true and exact versions; server timestamps                                           |
+| POST      | /plans/from-template        | template_id, name, idempotency_key UUID; atomic owner plan copy                                                                   |
+| POST      | /session-exercises/:id/sets | Required stable UUID id, position, reps, weight_kg, optional type/RPE/notes; identical retry returns saved row; changed retry 409 |
 
 The earlier Remaining API work paragraph is superseded for signup, verification, logout/recovery, consent, template copying, set retries and frontend wiring. Optimistic plan version checks, detailed progress windows, deployed rate limiting and production validation remain outstanding. Optional body measurement fields can be cleared with explicit null.
+
+## Plan-read CPU optimization
+
+Resource GET ownership is checked in the same JWT-owner-filtered read that returns its data; a missing authorized result is 404. Mutations still perform their separate owner check. Plan GET now returns only frontend-used plan/day/exercise/target columns, omitting owner and bookkeeping fields. Fitness consent checks use fresh document type/version and own consent version projections, queried concurrently after JWT verification; full legal/consent responses remain available. Each response exposes the integer X-Upstream-Requests diagnostic, with request-scoped counting and no shared data cache. See plan-read-performance.md for measured CPU and regression procedures.

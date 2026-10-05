@@ -78,3 +78,7 @@ Investigate plan-read CPU, remove redundant database work while retaining explic
 R2 pricing was verified read-only: Standard storage includes 10 GB-month, one million Class A and ten million Class B operations monthly, with free egress; excess usage is billable. No R2 resource or billing enrollment was created. This is pricing research only, not backup validation: https://developers.cloudflare.com/r2/pricing/
 
 Known limits remain the accepted bounded catalog/progress responses, last-write-wins plan editing, no completed-workout correction UI and development legal templates. Production workload/scaling, browser session and production SMTP readiness are unverified. No Phase 2, friend data migration, Git history rewrite or paid infrastructure. D:\fitness-tracker-v2 is unchanged.
+
+## CPU hold update — 2026-10-06
+
+The plan-read hold is cleared for the tested representative workload. See [plan-read-performance.md](plan-read-performance.md) and its sanitized evidence. Optimized version 1b4be985-15a7-4f8a-8b42-c0802579436a measured 36 matched successful plan reads: min/median 2 ms, mean 2.167 ms, max 5 ms; four upstream requests and 14,758-byte responses. Original 8 ms evidence above is retained. This changes only the CPU gate; other production launch gates are still pending. The auth stress burst reached one managed 429, documented in the new report.

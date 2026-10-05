@@ -156,6 +156,17 @@ describe.runIf(enabled)("real local Supabase Auth/PostgREST/RLS", () => {
   it("rejects query tampering", async () => {
     expect((await api(a, `/plans?owner_id=${b.id}`)).status).toBe(422);
   });
+  it("keeps plan read within its upstream and response projection budgets", async () => {
+    const response = await api(a, `/plans/${planId}`);
+    expect(response.status).toBe(200);
+    expect(response.headers.get("X-Upstream-Requests")).toBe("4");
+    const plan = await response.json();
+    expect(plan.id).toBe(planId);
+    expect(plan.workout_days).toEqual([]);
+    expect(plan).not.toHaveProperty("owner_id");
+    expect(plan).not.toHaveProperty("created_at");
+    expect((await api(a, "/plans/abc")).status).toBe(422);
+  });
   it("rejects a cross-user write through the API", async () => {
     expect(
       (await api(b, `/plans/${planId}`, "PATCH", { name: "Forged" })).status,

@@ -1,5 +1,6 @@
 import type { Env } from "./index";
 import { acceptance, documents } from "./legal";
+import { upstream } from "./upstream";
 
 export class ApiError extends Error {
   constructor(
@@ -20,7 +21,7 @@ export async function authenticate(
     throw new ApiError(401, "unauthenticated", "Sign in to continue");
   }
   const token = authorization.slice(7);
-  const result = await fetch(`${env.SUPABASE_URL}/auth/v1/user`, {
+  const result = await upstream(env, `${env.SUPABASE_URL}/auth/v1/user`, {
     headers: {
       apikey: env.SUPABASE_PUBLISHABLE_KEY,
       Authorization: `Bearer ${token}`,
@@ -211,12 +212,16 @@ export async function authSession(
   } else {
     throw new ApiError(404, "not_found", "Endpoint not found");
   }
-  const result = await fetch(`${env.SUPABASE_URL}/auth/v1/${endpoint}`, {
-    method,
-    headers: providerHeaders,
-    body: JSON.stringify(payload),
-    signal: AbortSignal.timeout(10000),
-  });
+  const result = await upstream(
+    env,
+    `${env.SUPABASE_URL}/auth/v1/${endpoint}`,
+    {
+      method,
+      headers: providerHeaders,
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(10000),
+    },
+  );
   if (result.status === 429)
     throw new ApiError(429, "rate_limited", "Try again later");
   if (!result.ok)

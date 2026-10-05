@@ -370,22 +370,31 @@ export async function fitness(
           : resource === "custom-exercises"
             ? "user_exercises"
             : "body_metric_entries";
-    await owned(env, user, table, id);
+    // GET checks ownership in the same query that reads the record. Mutation
+    // paths retain their separate owner lookup before any write.
+    if (
+      !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(
+        id,
+      )
+    )
+      throw new ApiError(422, "validation_error", "Invalid identifier");
     if (method === "GET") {
       const select =
         resource === "plans"
-          ? "*,workout_days(*,planned_exercises(*,planned_set_targets(*)))"
+          ? "id,name,description,archived_at,workout_days(id,name,position,planned_exercises(id,exercise_id,user_exercise_id,position,notes,planned_set_targets(id,position,reps,weight_kg,rest_seconds)))"
           : resource === "sessions"
             ? "*,session_exercises(*,performed_sets(*))"
             : "*";
-      return (
-        (await database(
-          env,
-          user,
-          `${table}?id=eq.${id}&owner_id=eq.${user.id}&select=${select}`,
-        )) as unknown[]
-      )[0];
+      const rows = (await database(
+        env,
+        user,
+        `${table}?id=eq.${id}&owner_id=eq.${user.id}&select=${select}`,
+      )) as unknown[];
+      if (!rows.length)
+        throw new ApiError(404, "not_found", "Resource not found");
+      return rows[0];
     }
+    await owned(env, user, table, id);
     if (method === "PATCH" && resource !== "sessions")
       return database(
         env,

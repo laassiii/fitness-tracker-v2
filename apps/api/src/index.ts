@@ -1,14 +1,20 @@
 import { ApiError, authenticate, authSession } from "./auth";
 import { fitness } from "./fitness";
-import { documents, consentStatus, acceptance } from "./legal";
+import {
+  documents,
+  consentStatus,
+  acceptance,
+  hasCurrentConsent,
+} from "./legal";
 import { jsonBody } from "./auth";
 import { database } from "./database";
 export interface Env {
   SUPABASE_URL: string;
   SUPABASE_PUBLISHABLE_KEY: string;
   APP_ORIGIN: string;
+  REQUEST_STATS?: { calls: number };
 }
-export default {
+const handler = {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
     const requestId = crypto.randomUUID();
@@ -64,7 +70,7 @@ export default {
             return Response.json(await consentStatus(env, user), { headers });
           }
         }
-        if (!(await consentStatus(env, user)).accepted)
+        if (!(await hasCurrentConsent(env, user)))
           throw new ApiError(
             403,
             "consent_required",
@@ -107,5 +113,16 @@ export default {
         { status: failure.status, headers },
       );
     }
+  },
+};
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    const stats = { calls: 0 };
+    const response = await handler.fetch(request, {
+      ...env,
+      REQUEST_STATS: stats,
+    });
+    response.headers.set("X-Upstream-Requests", String(stats.calls));
+    return response;
   },
 };

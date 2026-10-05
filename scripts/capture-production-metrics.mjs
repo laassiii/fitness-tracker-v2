@@ -1,6 +1,6 @@
 import { spawn } from "node:child_process";
 import { writeFileSync, mkdirSync } from "node:fs";
-mkdirSync("test-results", { recursive: true });
+mkdirSync("performance-results", { recursive: true });
 const rows = [];
 let depth = 0,
   inString = false,
@@ -38,6 +38,11 @@ child.stdout.on("data", (chunk) => {
         if (req?.url) {
           const url = new URL(req.url);
           const r = {
+            sample: /^perf-[a-f0-9-]{36}$/.test(
+              req.headers?.["x-validation-sample"] ?? "",
+            )
+              ? req.headers["x-validation-sample"]
+              : null,
             timestamp: e.eventTimestamp,
             route: url.pathname,
             method: req.method,
@@ -48,7 +53,8 @@ child.stdout.on("data", (chunk) => {
           };
           rows.push(r);
           writeFileSync(
-            "test-results/production-runtime-metrics.json",
+            process.env.METRICS_FILE ??
+              "performance-results/production-runtime-metrics.json",
             JSON.stringify(rows, null, 2),
           );
           console.log(JSON.stringify(r));
