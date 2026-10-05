@@ -1,0 +1,34 @@
+name: Phase 1 checks
+on:
+  pull_request:
+  push:
+    branches: [main, codex/phase-1]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run test
+      - run: npm run build
+      - name: Start isolated local Supabase
+        run: npx --yes supabase@2.119.0 start --agent no --output-format text > /dev/null 2>&1
+      - name: Validate migrations and independent RLS
+        run: |
+          npx --yes supabase@2.119.0 db lint --local --level error --agent no --output-format text
+          npx --yes supabase@2.119.0 test db --agent no --output-format text
+      - name: Test API against real local Auth and PostgreSQL
+        run: npm run test -w apps/api
+        env:
+          RUN_LOCAL_INTEGRATION: '1'
+      - name: Stop local test stack
+        if: always()
+        run: npx --yes supabase@2.119.0 stop --no-backup --agent no --output-format text

@@ -1,4 +1,5 @@
 import { ApiError, authenticate, authSession } from './auth';
+import { fitness } from './fitness';
 export interface Env { SUPABASE_URL: string; SUPABASE_PUBLISHABLE_KEY: string; APP_ORIGIN: string }
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
@@ -17,6 +18,11 @@ export default {
     if (request.method === 'GET' && url.pathname === '/api/v1/me') {
       const user = await authenticate(request, env);
       return Response.json({ user: { id: user.id } }, { headers });
+    }
+    if (url.pathname.startsWith('/api/v1/')) {
+      const user = await authenticate(request, env);
+      if (!['GET','HEAD'].includes(request.method) && request.headers.get('Content-Type')?.split(';')[0] !== 'application/json') throw new ApiError(415,'unsupported_media_type','Use application/json');
+      return Response.json(await fitness(request, env, user), { status: request.method==='POST'?201:200, headers });
     }
     return Response.json({ code: 'not_found', message: 'Endpoint not found', request_id: requestId }, { status: 404, headers });
     } catch (error) {
