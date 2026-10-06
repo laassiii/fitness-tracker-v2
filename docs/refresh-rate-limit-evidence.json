@@ -1,0 +1,15 @@
+{
+  "statuses": [
+    200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+    200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200, 200,
+    200, 200, 200, 429
+  ],
+  "provider_limits_unchanged": true,
+  "automatic_retry_requests": 1,
+  "retry_after": "60",
+  "real_provider_429": "PASS",
+  "user_message": ["Try again later"],
+  "browser_refresh_statuses": [429],
+  "browser_429_error_state": "observed",
+  "cleanup": "disposable identity deleted"
+}

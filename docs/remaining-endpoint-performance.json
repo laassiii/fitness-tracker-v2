@@ -1314,173 +1314,322 @@
       "count": 2,
       "cpu_min_ms": 2,
       "cpu_max_ms": 2,
-      "worker_wall_ms": [
-        228,
-        406
-      ]
+      "worker_wall_ms": [228, 406]
     },
     "POST /me/consents 200": {
       "count": 2,
       "cpu_min_ms": 4,
       "cpu_max_ms": 6,
-      "worker_wall_ms": [
-        859,
-        1965
-      ]
+      "worker_wall_ms": [859, 1965]
     },
     "PUT /me/profile 200": {
       "count": 5,
       "cpu_min_ms": 3,
       "cpu_max_ms": 6,
-      "worker_wall_ms": [
-        504,
-        816
-      ]
+      "worker_wall_ms": [504, 816]
     },
     "GET /me/profile 200": {
       "count": 4,
       "cpu_min_ms": 2,
       "cpu_max_ms": 3,
-      "worker_wall_ms": [
-        493,
-        875
-      ]
+      "worker_wall_ms": [493, 875]
     },
     "GET /exercises 200": {
       "count": 6,
       "cpu_min_ms": 3,
       "cpu_max_ms": 4,
-      "worker_wall_ms": [
-        646,
-        1051
-      ]
+      "worker_wall_ms": [646, 1051]
     },
     "PATCH /body-metrics/REDACTED 200": {
       "count": 8,
       "cpu_min_ms": 3,
       "cpu_max_ms": 5,
-      "worker_wall_ms": [
-        483,
-        1032
-      ]
+      "worker_wall_ms": [483, 1032]
     },
     "PATCH /body-metrics/REDACTED 422": {
       "count": 1,
       "cpu_min_ms": 2,
       "cpu_max_ms": 2,
-      "worker_wall_ms": [
-        326,
-        326
-      ]
+      "worker_wall_ms": [326, 326]
     },
     "GET /body-metrics 200": {
       "count": 5,
       "cpu_min_ms": 3,
       "cpu_max_ms": 3,
-      "worker_wall_ms": [
-        493,
-        801
-      ]
+      "worker_wall_ms": [493, 801]
     },
     "POST /plans 201": {
       "count": 1,
       "cpu_min_ms": 3,
       "cpu_max_ms": 3,
-      "worker_wall_ms": [
-        513,
-        513
-      ]
+      "worker_wall_ms": [513, 513]
     },
     "PATCH /plans/REDACTED 200": {
       "count": 1,
       "cpu_min_ms": 4,
       "cpu_max_ms": 4,
-      "worker_wall_ms": [
-        686,
-        686
-      ]
+      "worker_wall_ms": [686, 686]
     },
     "POST /plans/REDACTED/days 201": {
       "count": 1,
       "cpu_min_ms": 4,
       "cpu_max_ms": 4,
-      "worker_wall_ms": [
-        1020,
-        1020
-      ]
+      "worker_wall_ms": [1020, 1020]
     },
     "POST /days/REDACTED/exercises 201": {
       "count": 1,
       "cpu_min_ms": 4,
       "cpu_max_ms": 4,
-      "worker_wall_ms": [
-        849,
-        849
-      ]
+      "worker_wall_ms": [849, 849]
     },
     "POST /sessions 201": {
       "count": 1,
       "cpu_min_ms": 5,
       "cpu_max_ms": 5,
-      "worker_wall_ms": [
-        862,
-        862
-      ]
+      "worker_wall_ms": [862, 862]
     },
     "GET /sessions/REDACTED 200": {
       "count": 4,
       "cpu_min_ms": 3,
       "cpu_max_ms": 3,
-      "worker_wall_ms": [
-        486,
-        529
-      ]
+      "worker_wall_ms": [486, 529]
     },
     "POST /session-exercises/REDACTED/sets 201": {
       "count": 10,
       "cpu_min_ms": 4,
       "cpu_max_ms": 6,
-      "worker_wall_ms": [
-        833,
-        1177
-      ]
+      "worker_wall_ms": [833, 1177]
     },
     "POST /sessions/REDACTED/complete 201": {
       "count": 1,
       "cpu_min_ms": 5,
       "cpu_max_ms": 5,
-      "worker_wall_ms": [
-        979,
-        979
-      ]
+      "worker_wall_ms": [979, 979]
     },
     "GET /history 200": {
       "count": 5,
       "cpu_min_ms": 2,
       "cpu_max_ms": 3,
-      "worker_wall_ms": [
-        485,
-        824
-      ]
+      "worker_wall_ms": [485, 824]
     },
     "GET /progress 200": {
       "count": 4,
       "cpu_min_ms": 3,
       "cpu_max_ms": 3,
-      "worker_wall_ms": [
-        501,
-        519
-      ]
+      "worker_wall_ms": [501, 519]
     },
     "POST /auth/refresh 200": {
       "count": 2,
       "cpu_min_ms": 1,
       "cpu_max_ms": 1,
-      "worker_wall_ms": [
-        169,
-        173
-      ]
+      "worker_wall_ms": [169, 173]
     }
   },
-  "matched_count": 64
+  "matched_count": 64,
+  "body_metric_creation_followup": [
+    {
+      "sample": "perf-8c7aa76d-8737-4f0f-a6fb-e904d5af729c",
+      "method": "POST",
+      "route": "/auth/login",
+      "status": 200,
+      "client_wall_ms": 791,
+      "upstream_requests": 1,
+      "metrics": {
+        "sample": "perf-8c7aa76d-8737-4f0f-a6fb-e904d5af729c",
+        "timestamp": 1791308699974,
+        "route": "/api/v1/auth/login",
+        "method": "POST",
+        "cpu_ms": 1,
+        "worker_wall_ms": 569,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-5d7db379-4d10-4da6-af9a-8279082c2d0f",
+      "method": "POST",
+      "route": "/me/consents",
+      "status": 200,
+      "client_wall_ms": 2634,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-5d7db379-4d10-4da6-af9a-8279082c2d0f",
+        "timestamp": 1791308700601,
+        "route": "/api/v1/me/consents",
+        "method": "POST",
+        "cpu_ms": 3,
+        "worker_wall_ms": 2579,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-3ebe75fd-1203-4616-99f2-d0dbb3935d46",
+      "method": "POST",
+      "route": "/auth/login",
+      "status": 200,
+      "client_wall_ms": 359,
+      "upstream_requests": 1,
+      "metrics": {
+        "sample": "perf-3ebe75fd-1203-4616-99f2-d0dbb3935d46",
+        "timestamp": 1791308703578,
+        "route": "/api/v1/auth/login",
+        "method": "POST",
+        "cpu_ms": 1,
+        "worker_wall_ms": 266,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-cfc6ddc4-5f3e-481f-8688-9b18594af7b4",
+      "method": "POST",
+      "route": "/me/consents",
+      "status": 200,
+      "client_wall_ms": 1235,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-cfc6ddc4-5f3e-481f-8688-9b18594af7b4",
+        "timestamp": 1791308703896,
+        "route": "/api/v1/me/consents",
+        "method": "POST",
+        "cpu_ms": 3,
+        "worker_wall_ms": 1184,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-94f3afa6-550e-4691-8891-137e72a5fb51",
+      "method": "POST",
+      "route": "/body-metrics",
+      "status": 201,
+      "client_wall_ms": 873,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-94f3afa6-550e-4691-8891-137e72a5fb51",
+        "timestamp": 1791308705133,
+        "route": "/api/v1/body-metrics",
+        "method": "POST",
+        "cpu_ms": 3,
+        "worker_wall_ms": 819,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-33c47a1d-739a-4834-8020-7c4280f751a3",
+      "method": "POST",
+      "route": "/body-metrics",
+      "status": 201,
+      "client_wall_ms": 1321,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-33c47a1d-739a-4834-8020-7c4280f751a3",
+        "timestamp": 1791308706091,
+        "route": "/api/v1/body-metrics",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 1176,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-2b9cd858-1535-4c53-8885-b5d3f2f16a69",
+      "method": "POST",
+      "route": "/body-metrics",
+      "status": 201,
+      "client_wall_ms": 855,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-2b9cd858-1535-4c53-8885-b5d3f2f16a69",
+        "timestamp": 1791308707325,
+        "route": "/api/v1/body-metrics",
+        "method": "POST",
+        "cpu_ms": 3,
+        "worker_wall_ms": 804,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-9c218f24-df86-40b3-82ed-f36cf7ff099a",
+      "method": "POST",
+      "route": "/body-metrics",
+      "status": 201,
+      "client_wall_ms": 1201,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-9c218f24-df86-40b3-82ed-f36cf7ff099a",
+        "timestamp": 1791308708185,
+        "route": "/api/v1/body-metrics",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 1139,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-107bc2ba-4cb4-4732-aac5-41ce4806d10b",
+      "method": "POST",
+      "route": "/body-metrics",
+      "status": 201,
+      "client_wall_ms": 541,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-107bc2ba-4cb4-4732-aac5-41ce4806d10b",
+        "timestamp": 1791308709384,
+        "route": "/api/v1/body-metrics",
+        "method": "POST",
+        "cpu_ms": 2,
+        "worker_wall_ms": 487,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-000c315d-58d9-40e0-9d9a-2e8e0537b8e3",
+      "method": "POST",
+      "route": "/body-metrics",
+      "status": 201,
+      "client_wall_ms": 886,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-000c315d-58d9-40e0-9d9a-2e8e0537b8e3",
+        "timestamp": 1791308709927,
+        "route": "/api/v1/body-metrics",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 826,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-cf89a4f2-a7f7-499f-8d07-9a65518c75fa",
+      "method": "GET",
+      "route": "/body-metrics",
+      "status": 200,
+      "client_wall_ms": 1187,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-cf89a4f2-a7f7-499f-8d07-9a65518c75fa",
+        "timestamp": 1791308710815,
+        "route": "/api/v1/body-metrics",
+        "method": "GET",
+        "cpu_ms": 2,
+        "worker_wall_ms": 1129,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    }
+  ],
+  "body_metric_creation_summary": {
+    "requests": 6,
+    "matched": 6,
+    "cpu_ms": [2, 4],
+    "worker_wall_ms": [487, 1176]
+  }
 }
