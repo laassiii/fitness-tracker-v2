@@ -22,6 +22,11 @@ const handler = {
       "Cache-Control": "no-store",
       "X-Content-Type-Options": "nosniff",
       "X-Request-ID": requestId,
+      "Referrer-Policy": "no-referrer",
+      "X-Frame-Options": "DENY",
+      "Content-Security-Policy": "default-src 'none'; frame-ancestors 'none'; base-uri 'none'",
+      "Permissions-Policy": "camera=(), microphone=(), geolocation=()",
+      "Strict-Transport-Security": "max-age=31536000",
     };
     try {
       if (request.method === "GET" && url.pathname === "/api/v1/health") {
@@ -108,9 +113,11 @@ const handler = {
               "service_unavailable",
               "Service is temporarily unavailable",
             );
+      const errorHeaders = new Headers(headers);
+      if (failure.status === 429) errorHeaders.set("Retry-After", "60");
       return Response.json(
         { code: failure.code, message: failure.message, request_id: requestId },
-        { status: failure.status, headers },
+        { status: failure.status, headers: errorHeaders },
       );
     }
   },

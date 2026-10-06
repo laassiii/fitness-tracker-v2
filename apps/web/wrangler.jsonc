@@ -1,0 +1,6 @@
+{
+  "name": "fitness-tracker-prod",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-10-05",
+  "services": [{ "binding": "API", "service": "fitness-tracker-api" }]
+}

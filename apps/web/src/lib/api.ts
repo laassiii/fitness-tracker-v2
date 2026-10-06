@@ -11,6 +11,7 @@ type SessionToken = { access_token: string; expires_in: number };
 let accessToken: string | null = null;
 let expiresAt = 0;
 let refreshing: Promise<void> | null = null;
+let refreshBlockedUntil = 0;
 export function clearSession() {
   accessToken = null;
   expiresAt = 0;
@@ -44,11 +45,15 @@ async function transport<T>(
   return data as T;
 }
 export async function restore() {
+  if (Date.now() < refreshBlockedUntil)
+    throw new ApiError("rate_limited", "Session refresh is temporarily limited. Please wait a minute before signing in again.", 429);
   if (!refreshing)
     refreshing = transport<SessionToken>("/auth/refresh", "POST", {})
       .then(saveSession)
       .catch((error) => {
-        clearSession();
+        if (error instanceof ApiError && error.status === 429)
+          refreshBlockedUntil = Date.now() + 60000;
+        else clearSession();
         throw error;
       })
       .finally(() => {
@@ -62,11 +67,12 @@ export async function api<T>(
   body?: unknown,
 ): Promise<T> {
   if (accessToken && Date.now() > expiresAt - 30000) await restore();
+  const sentToken = accessToken;
   try {
     return await transport<T>(path, method, body);
   } catch (error) {
     if (error instanceof ApiError && error.status === 401 && accessToken) {
-      await restore();
+      if (accessToken === sentToken) await restore();
       return transport<T>(path, method, body);
     }
     throw error;

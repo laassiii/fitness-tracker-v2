@@ -3,6 +3,15 @@ import worker, { type Env } from './index';
 const env: Env = { SUPABASE_URL: 'https://auth.invalid', SUPABASE_PUBLISHABLE_KEY: 'test-public-key', APP_ORIGIN: 'https://app.invalid' };
 afterEach(() => vi.unstubAllGlobals());
 describe('authentication boundary', () => {
+  it('preserves provider rate limits without retrying or leaking provider details', async () => {
+    const provider=vi.fn().mockResolvedValue(new Response('private upstream details',{status:429}));
+    vi.stubGlobal('fetch',provider);
+    const response=await worker.fetch(new Request('https://api.invalid/api/v1/auth/refresh',{method:'POST',headers:{Origin:env.APP_ORIGIN,'Content-Type':'application/json',Cookie:'__Host-fitness-refresh=fixture'},body:'{}'}),env);
+    expect(response.status).toBe(429);
+    expect(response.headers.get('Retry-After')).toBe('60');
+    expect(await response.text()).not.toContain('private upstream details');
+    expect(provider).toHaveBeenCalledTimes(1);
+  });
   it('rejects unauthenticated requests without contacting the provider', async () => {
     const provider = vi.fn(); vi.stubGlobal('fetch', provider);
     expect((await worker.fetch(new Request('https://api.invalid/api/v1/me'), env)).status).toBe(401);
