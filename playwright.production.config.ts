@@ -1,0 +1,1 @@
+import {defineConfig} from '@playwright/test';export default defineConfig({testDir:'./tests/browser',testMatch:'production-workflows.spec.ts',workers:1,timeout:90000,use:{headless:true,trace:'off',screenshot:'off',launchOptions:{executablePath:process.env.PW_BROWSER_EXECUTABLE}},reporter:'list'});

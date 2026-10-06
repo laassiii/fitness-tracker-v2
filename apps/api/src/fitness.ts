@@ -394,6 +394,15 @@ export async function fitness(
         throw new ApiError(404, "not_found", "Resource not found");
       return rows[0];
     }
+    if (method === "PATCH" && resource === "body-metrics") {
+      // JWT-derived ownership is enforced by the mutation predicate itself;
+      // RLS independently applies. Empty results conceal foreign/missing IDs.
+      const rows = await database(env, user,
+        `${table}?id=eq.${id}&owner_id=eq.${user.id}`, "PATCH",
+        validate(await jsonBody(request), metricRules, true)) as unknown[];
+      if (!rows.length) throw new ApiError(404, "not_found", "Resource not found");
+      return rows;
+    }
     await owned(env, user, table, id);
     if (method === "PATCH" && resource !== "sessions")
       return database(
@@ -500,13 +509,12 @@ export async function fitness(
         "workout_sessions",
         parentRow.session_id as string,
       );
-      const previous = (await database(
-        env,
-        user,
-        `performed_sets?id=eq.${body.id}&owner_id=eq.${user.id}&limit=1`,
-      )) as unknown[];
-      if (session.status !== "in_progress" && !previous.length)
-        throw new ApiError(409, "session_closed", "Workout is already closed");
+      if (session.status !== "in_progress") {
+        const previous = (await database(env, user,
+          `performed_sets?id=eq.${body.id}&owner_id=eq.${user.id}&limit=1`)) as unknown[];
+        if (!previous.length)
+          throw new ApiError(409, "session_closed", "Workout is already closed");
+      }
       return database(env, user, "rpc/log_set", "POST", {
         p_id: body.id,
         p_session_exercise_id: id,

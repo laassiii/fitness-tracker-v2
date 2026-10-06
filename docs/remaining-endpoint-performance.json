@@ -1,0 +1,1486 @@
+{
+  "version": "dc1854fd-9158-4e92-9340-1001c7d6a447",
+  "requests": 81,
+  "matched": [
+    {
+      "sample": "perf-23ce4bae-7e1b-44cf-85ff-c7a387bf1df0",
+      "method": "POST",
+      "route": "/auth/login",
+      "status": 200,
+      "client_wall_ms": 686,
+      "upstream_requests": 1,
+      "metrics": {
+        "sample": "perf-23ce4bae-7e1b-44cf-85ff-c7a387bf1df0",
+        "timestamp": 1791308155127,
+        "route": "/api/v1/auth/login",
+        "method": "POST",
+        "cpu_ms": 2,
+        "worker_wall_ms": 406,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-e710fdad-13aa-494c-9e4f-f6b65babc6e5",
+      "method": "POST",
+      "route": "/me/consents",
+      "status": 200,
+      "client_wall_ms": 2024,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-e710fdad-13aa-494c-9e4f-f6b65babc6e5",
+        "timestamp": 1791308155614,
+        "route": "/api/v1/me/consents",
+        "method": "POST",
+        "cpu_ms": 6,
+        "worker_wall_ms": 1965,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-c58d56ef-760b-47b0-a84e-cac4c5098bc6",
+      "method": "POST",
+      "route": "/auth/login",
+      "status": 200,
+      "client_wall_ms": 351,
+      "upstream_requests": 1,
+      "metrics": {
+        "sample": "perf-c58d56ef-760b-47b0-a84e-cac4c5098bc6",
+        "timestamp": 1791308157978,
+        "route": "/api/v1/auth/login",
+        "method": "POST",
+        "cpu_ms": 2,
+        "worker_wall_ms": 228,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-8c505f15-82db-4f46-bd0a-98d393f66b19",
+      "method": "POST",
+      "route": "/me/consents",
+      "status": 200,
+      "client_wall_ms": 923,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-8c505f15-82db-4f46-bd0a-98d393f66b19",
+        "timestamp": 1791308158273,
+        "route": "/api/v1/me/consents",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 859,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-547dae96-e685-4dcf-9203-e922783373ad",
+      "method": "PUT",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 841,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-547dae96-e685-4dcf-9203-e922783373ad",
+        "timestamp": 1791308159188,
+        "route": "/api/v1/me/profile",
+        "method": "PUT",
+        "cpu_ms": 6,
+        "worker_wall_ms": 785,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-f0663322-be6e-4602-81e4-ec3752d62c29",
+      "method": "GET",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 943,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-f0663322-be6e-4602-81e4-ec3752d62c29",
+        "timestamp": 1791308160041,
+        "route": "/api/v1/me/profile",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 875,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-eaafb441-164e-4669-9183-208eb3470c14",
+      "method": "GET",
+      "route": "/exercises",
+      "status": 200,
+      "client_wall_ms": 1115,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-eaafb441-164e-4669-9183-208eb3470c14",
+        "timestamp": 1791308160980,
+        "route": "/api/v1/exercises",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 1051,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-4f5e7bc0-34a4-4432-8754-b7b18fc6a84a",
+      "method": "PUT",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 872,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-4f5e7bc0-34a4-4432-8754-b7b18fc6a84a",
+        "timestamp": 1791308162086,
+        "route": "/api/v1/me/profile",
+        "method": "PUT",
+        "cpu_ms": 4,
+        "worker_wall_ms": 816,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-2cffc6db-3a9b-4563-be41-ea42b68e32bb",
+      "method": "GET",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 596,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-2cffc6db-3a9b-4563-be41-ea42b68e32bb",
+        "timestamp": 1791308162959,
+        "route": "/api/v1/me/profile",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 540,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-db2a8e0b-7a22-4395-9e49-ba6b32ea320f",
+      "method": "GET",
+      "route": "/exercises",
+      "status": 200,
+      "client_wall_ms": 754,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-db2a8e0b-7a22-4395-9e49-ba6b32ea320f",
+        "timestamp": 1791308163562,
+        "route": "/api/v1/exercises",
+        "method": "GET",
+        "cpu_ms": 4,
+        "worker_wall_ms": 691,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-aec8bc58-b60a-4304-839b-71f1cb5a30ae",
+      "method": "PUT",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 841,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-aec8bc58-b60a-4304-839b-71f1cb5a30ae",
+        "timestamp": 1791308164315,
+        "route": "/api/v1/me/profile",
+        "method": "PUT",
+        "cpu_ms": 3,
+        "worker_wall_ms": 778,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-63ed9ec7-0c79-4141-a9d7-9926afc503d3",
+      "method": "GET",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 560,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-63ed9ec7-0c79-4141-a9d7-9926afc503d3",
+        "timestamp": 1791308165161,
+        "route": "/api/v1/me/profile",
+        "method": "GET",
+        "cpu_ms": 2,
+        "worker_wall_ms": 493,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-8122218c-d9a6-44c1-a5d7-86c5805b8b66",
+      "method": "GET",
+      "route": "/exercises",
+      "status": 200,
+      "client_wall_ms": 740,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-8122218c-d9a6-44c1-a5d7-86c5805b8b66",
+        "timestamp": 1791308165710,
+        "route": "/api/v1/exercises",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 684,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-32971013-5a4d-4265-b011-16e273d5e2e4",
+      "method": "PUT",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 562,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-32971013-5a4d-4265-b011-16e273d5e2e4",
+        "timestamp": 1791308166451,
+        "route": "/api/v1/me/profile",
+        "method": "PUT",
+        "cpu_ms": 3,
+        "worker_wall_ms": 504,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-14f7f0a0-0849-4c75-ac2d-f2898c2b8ec7",
+      "method": "GET",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 883,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-2a558141-590f-4623-b692-df0ba21e69b9",
+      "method": "GET",
+      "route": "/exercises",
+      "status": 200,
+      "client_wall_ms": 1066,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-2a558141-590f-4623-b692-df0ba21e69b9",
+        "timestamp": 1791308167891,
+        "route": "/api/v1/exercises",
+        "method": "GET",
+        "cpu_ms": 4,
+        "worker_wall_ms": 1014,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-cef57dc4-862c-45d0-8e09-987af1b315ba",
+      "method": "PUT",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 559,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-e14b7661-d937-4cab-be30-5e7b410da59a",
+      "method": "GET",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 568,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-e14b7661-d937-4cab-be30-5e7b410da59a",
+        "timestamp": 1791308169531,
+        "route": "/api/v1/me/profile",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 501,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-4cf9a105-de5e-4195-b998-937a09d87a88",
+      "method": "GET",
+      "route": "/exercises",
+      "status": 200,
+      "client_wall_ms": 745,
+      "upstream_requests": 5,
+      "metrics": null
+    },
+    {
+      "sample": "perf-71382662-5e2d-4824-bafa-013a181e9c74",
+      "method": "PUT",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 575,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-71382662-5e2d-4824-bafa-013a181e9c74",
+        "timestamp": 1791308170844,
+        "route": "/api/v1/me/profile",
+        "method": "PUT",
+        "cpu_ms": 3,
+        "worker_wall_ms": 506,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-1640654c-a112-477e-be45-b72a8d1d5fbf",
+      "method": "GET",
+      "route": "/me/profile",
+      "status": 200,
+      "client_wall_ms": 590,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-b366bc50-5124-4a91-af63-3d0e21b3c21b",
+      "method": "GET",
+      "route": "/exercises",
+      "status": 200,
+      "client_wall_ms": 704,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-b366bc50-5124-4a91-af63-3d0e21b3c21b",
+        "timestamp": 1791308171998,
+        "route": "/api/v1/exercises",
+        "method": "GET",
+        "cpu_ms": 4,
+        "worker_wall_ms": 647,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-5255feee-c299-494c-9d50-4d384cc1964a",
+      "method": "GET",
+      "route": "/exercises",
+      "status": 200,
+      "client_wall_ms": 700,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-5255feee-c299-494c-9d50-4d384cc1964a",
+        "timestamp": 1791308172699,
+        "route": "/api/v1/exercises",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 646,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-228b22a4-309a-4311-abc7-ace7f86bde91",
+      "method": "POST",
+      "route": "/body-metrics",
+      "status": 201,
+      "client_wall_ms": 559,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-dfdd4f78-0bce-4712-aa40-61a3b69a7825",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 1213,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-dfdd4f78-0bce-4712-aa40-61a3b69a7825",
+        "timestamp": 1791308174073,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 4,
+        "worker_wall_ms": 1032,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-12b7ff46-85ed-489e-af5f-ee7b4167129c",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 554,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-12b7ff46-85ed-489e-af5f-ee7b4167129c",
+        "timestamp": 1791308175186,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 3,
+        "worker_wall_ms": 484,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-9e36c4ec-5cf4-4c08-b4ab-9c3dd5ed285c",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 583,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-9e36c4ec-5cf4-4c08-b4ab-9c3dd5ed285c",
+        "timestamp": 1791308175727,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 4,
+        "worker_wall_ms": 525,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-3a461412-81b0-44ee-b9e4-649a724aaea8",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 586,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-3a461412-81b0-44ee-b9e4-649a724aaea8",
+        "timestamp": 1791308176323,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 3,
+        "worker_wall_ms": 516,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-ae226a4a-008d-447a-92e6-bdeeb4d5a815",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 571,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-ae226a4a-008d-447a-92e6-bdeeb4d5a815",
+        "timestamp": 1791308176895,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 5,
+        "worker_wall_ms": 513,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-33a7575c-bc4d-45ef-8f69-875372c286f6",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 547,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-4af26c1b-2329-4519-86c6-e3d542e5165a",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 557,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-4af26c1b-2329-4519-86c6-e3d542e5165a",
+        "timestamp": 1791308178010,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 3,
+        "worker_wall_ms": 505,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-79a3857d-708a-40b1-af7c-d6b1fd5bc1eb",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 608,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-79a3857d-708a-40b1-af7c-d6b1fd5bc1eb",
+        "timestamp": 1791308178581,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 3,
+        "worker_wall_ms": 541,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-130b90eb-e9fa-4c1f-bd2e-0e62948bafce",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 572,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-f886dd74-1e92-4aa8-85ab-ade3441903bf",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 200,
+      "client_wall_ms": 549,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-f886dd74-1e92-4aa8-85ab-ade3441903bf",
+        "timestamp": 1791308179760,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 3,
+        "worker_wall_ms": 483,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-086c10b2-bc23-4f4e-8acb-b85cb3187024",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 404,
+      "client_wall_ms": 552,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-12b6af70-5c1a-4c0a-a72a-d92265c353d9",
+      "method": "PATCH",
+      "route": "/body-metrics/REDACTED",
+      "status": 422,
+      "client_wall_ms": 390,
+      "upstream_requests": 3,
+      "metrics": {
+        "sample": "perf-12b6af70-5c1a-4c0a-a72a-d92265c353d9",
+        "timestamp": 1791308180859,
+        "route": "/api/v1/body-metrics/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 2,
+        "worker_wall_ms": 326,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-21aea279-16af-456f-87cb-131e81e232fe",
+      "method": "GET",
+      "route": "/body-metrics",
+      "status": 200,
+      "client_wall_ms": 947,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-21aea279-16af-456f-87cb-131e81e232fe",
+        "timestamp": 1791308181330,
+        "route": "/api/v1/body-metrics",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 801,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-5f0939a9-a86e-47c0-ac47-4f075dd5c7b3",
+      "method": "POST",
+      "route": "/plans",
+      "status": 201,
+      "client_wall_ms": 570,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-5f0939a9-a86e-47c0-ac47-4f075dd5c7b3",
+        "timestamp": 1791308182189,
+        "route": "/api/v1/plans",
+        "method": "POST",
+        "cpu_ms": 3,
+        "worker_wall_ms": 513,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-17ce9c27-aec6-465f-a98e-88d4a1edf29b",
+      "method": "PATCH",
+      "route": "/plans/REDACTED",
+      "status": 200,
+      "client_wall_ms": 758,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-17ce9c27-aec6-465f-a98e-88d4a1edf29b",
+        "timestamp": 1791308182774,
+        "route": "/api/v1/plans/REDACTED",
+        "method": "PATCH",
+        "cpu_ms": 4,
+        "worker_wall_ms": 686,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-9766eb1a-6e80-4156-a2bd-b6e144661977",
+      "method": "POST",
+      "route": "/plans/REDACTED/days",
+      "status": 201,
+      "client_wall_ms": 1075,
+      "upstream_requests": 5,
+      "metrics": {
+        "sample": "perf-9766eb1a-6e80-4156-a2bd-b6e144661977",
+        "timestamp": 1791308183516,
+        "route": "/api/v1/plans/REDACTED/days",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 1020,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-662bb2d9-35d2-4f83-8590-f7d7bd6e7441",
+      "method": "POST",
+      "route": "/days/REDACTED/exercises",
+      "status": 201,
+      "client_wall_ms": 908,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-662bb2d9-35d2-4f83-8590-f7d7bd6e7441",
+        "timestamp": 1791308184593,
+        "route": "/api/v1/days/REDACTED/exercises",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 849,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-3210946a-853d-4625-86bb-6003e6da3f88",
+      "method": "POST",
+      "route": "/sessions",
+      "status": 201,
+      "client_wall_ms": 921,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-3210946a-853d-4625-86bb-6003e6da3f88",
+        "timestamp": 1791308185502,
+        "route": "/api/v1/sessions",
+        "method": "POST",
+        "cpu_ms": 5,
+        "worker_wall_ms": 862,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-38c6479c-25b0-4e28-bc86-dd51829f7dc7",
+      "method": "GET",
+      "route": "/sessions/REDACTED",
+      "status": 200,
+      "client_wall_ms": 568,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-38c6479c-25b0-4e28-bc86-dd51829f7dc7",
+        "timestamp": 1791308186430,
+        "route": "/api/v1/sessions/REDACTED",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 502,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-26e92a91-3835-4eec-8966-36f8095c64ea",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 1247,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-26e92a91-3835-4eec-8966-36f8095c64ea",
+        "timestamp": 1791308187002,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 6,
+        "worker_wall_ms": 1177,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-d6760387-e74f-4e15-9c15-64621d0ef052",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 905,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-d6760387-e74f-4e15-9c15-64621d0ef052",
+        "timestamp": 1791308188237,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 5,
+        "worker_wall_ms": 846,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-fedda5d7-04df-4ab7-82ae-e224c7017616",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 946,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-fedda5d7-04df-4ab7-82ae-e224c7017616",
+        "timestamp": 1791308189153,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 5,
+        "worker_wall_ms": 877,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-86cc3862-5db7-4a57-85ae-29fe2288edaf",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 901,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-86cc3862-5db7-4a57-85ae-29fe2288edaf",
+        "timestamp": 1791308190093,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 838,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-65edde9a-d163-4f5c-b3b4-e8cd07cb56ff",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 908,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-65edde9a-d163-4f5c-b3b4-e8cd07cb56ff",
+        "timestamp": 1791308191002,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 837,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-3f7aff95-7de5-418f-97e4-26a8b1458daf",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 904,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-3f7aff95-7de5-418f-97e4-26a8b1458daf",
+        "timestamp": 1791308191910,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 833,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-6e246a08-96fb-4896-a82f-e1f60863ee1a",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 908,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-6e246a08-96fb-4896-a82f-e1f60863ee1a",
+        "timestamp": 1791308192807,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 845,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-57aebd60-3aee-45bd-8be7-125558414ec5",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 898,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-57aebd60-3aee-45bd-8be7-125558414ec5",
+        "timestamp": 1791308193708,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 4,
+        "worker_wall_ms": 840,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-0d8909a0-4e85-4fc6-8128-88182da77ade",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 921,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-0d8909a0-4e85-4fc6-8128-88182da77ade",
+        "timestamp": 1791308194619,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 5,
+        "worker_wall_ms": 851,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-472a6139-f906-4c6a-9cbf-c457fdef45bb",
+      "method": "POST",
+      "route": "/session-exercises/REDACTED/sets",
+      "status": 201,
+      "client_wall_ms": 900,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-472a6139-f906-4c6a-9cbf-c457fdef45bb",
+        "timestamp": 1791308195534,
+        "route": "/api/v1/session-exercises/REDACTED/sets",
+        "method": "POST",
+        "cpu_ms": 5,
+        "worker_wall_ms": 834,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-677aaeb7-ad3d-4453-bbd3-d581265b14ab",
+      "method": "POST",
+      "route": "/sessions/REDACTED/complete",
+      "status": 201,
+      "client_wall_ms": 1038,
+      "upstream_requests": 6,
+      "metrics": {
+        "sample": "perf-677aaeb7-ad3d-4453-bbd3-d581265b14ab",
+        "timestamp": 1791308196429,
+        "route": "/api/v1/sessions/REDACTED/complete",
+        "method": "POST",
+        "cpu_ms": 5,
+        "worker_wall_ms": 979,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-68dc56a3-3a34-49b1-b422-b38451747637",
+      "method": "GET",
+      "route": "/history",
+      "status": 200,
+      "client_wall_ms": 569,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-68dc56a3-3a34-49b1-b422-b38451747637",
+        "timestamp": 1791308197466,
+        "route": "/api/v1/history",
+        "method": "GET",
+        "cpu_ms": 2,
+        "worker_wall_ms": 510,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-1d76c771-8699-4cf9-96d7-132b10e04d38",
+      "method": "GET",
+      "route": "/progress",
+      "status": 200,
+      "client_wall_ms": 573,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-1d76c771-8699-4cf9-96d7-132b10e04d38",
+        "timestamp": 1791308198039,
+        "route": "/api/v1/progress",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 510,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-9ffa100f-811a-467a-a9de-5c88f5ed8c41",
+      "method": "GET",
+      "route": "/sessions/REDACTED",
+      "status": 200,
+      "client_wall_ms": 551,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-9ffa100f-811a-467a-a9de-5c88f5ed8c41",
+        "timestamp": 1791308198614,
+        "route": "/api/v1/sessions/REDACTED",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 486,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-0a19cab3-89d7-4a66-b490-5aae4371e6dd",
+      "method": "GET",
+      "route": "/body-metrics",
+      "status": 200,
+      "client_wall_ms": 546,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-0a19cab3-89d7-4a66-b490-5aae4371e6dd",
+        "timestamp": 1791308199153,
+        "route": "/api/v1/body-metrics",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 493,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-6bc1fe8f-92ca-4cfe-8a7b-9375720f755f",
+      "method": "GET",
+      "route": "/history",
+      "status": 200,
+      "client_wall_ms": 541,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-6bc1fe8f-92ca-4cfe-8a7b-9375720f755f",
+        "timestamp": 1791308199702,
+        "route": "/api/v1/history",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 485,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-d65f1f42-0455-421b-a07e-661713bb0c42",
+      "method": "GET",
+      "route": "/progress",
+      "status": 200,
+      "client_wall_ms": 571,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-d65f1f42-0455-421b-a07e-661713bb0c42",
+        "timestamp": 1791308200239,
+        "route": "/api/v1/progress",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 519,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-bd77b3d3-e36d-4178-961d-ff554e39204e",
+      "method": "GET",
+      "route": "/sessions/REDACTED",
+      "status": 200,
+      "client_wall_ms": 585,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-bd77b3d3-e36d-4178-961d-ff554e39204e",
+        "timestamp": 1791308200814,
+        "route": "/api/v1/sessions/REDACTED",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 529,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-3537507f-22aa-415c-a3ad-803fb3f573dc",
+      "method": "GET",
+      "route": "/body-metrics",
+      "status": 200,
+      "client_wall_ms": 561,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-d763ec35-7f26-48fe-a956-3220a011f70c",
+      "method": "GET",
+      "route": "/history",
+      "status": 200,
+      "client_wall_ms": 538,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-d763ec35-7f26-48fe-a956-3220a011f70c",
+        "timestamp": 1791308201957,
+        "route": "/api/v1/history",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 487,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-a4f9dcdb-5052-4b5d-8010-8aac8a9e84f0",
+      "method": "GET",
+      "route": "/progress",
+      "status": 200,
+      "client_wall_ms": 560,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-a4f9dcdb-5052-4b5d-8010-8aac8a9e84f0",
+        "timestamp": 1791308202502,
+        "route": "/api/v1/progress",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 501,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-bc66e242-c9f9-426e-858c-5dd9974d1993",
+      "method": "GET",
+      "route": "/sessions/REDACTED",
+      "status": 200,
+      "client_wall_ms": 599,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-fa152963-1069-4839-8a50-6c020e83dfde",
+      "method": "GET",
+      "route": "/body-metrics",
+      "status": 200,
+      "client_wall_ms": 586,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-fa152963-1069-4839-8a50-6c020e83dfde",
+        "timestamp": 1791308203671,
+        "route": "/api/v1/body-metrics",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 517,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-c38b801c-4563-4a5e-9035-74977796b288",
+      "method": "GET",
+      "route": "/history",
+      "status": 200,
+      "client_wall_ms": 874,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-c38b801c-4563-4a5e-9035-74977796b288",
+        "timestamp": 1791308204239,
+        "route": "/api/v1/history",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 824,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-aacb6024-28c2-4305-8214-10084567dce0",
+      "method": "GET",
+      "route": "/progress",
+      "status": 200,
+      "client_wall_ms": 573,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-81e3b792-e040-4633-9e05-ea6c8f603229",
+      "method": "GET",
+      "route": "/sessions/REDACTED",
+      "status": 200,
+      "client_wall_ms": 554,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-bbb0d476-1c37-4e8f-b7d0-ba2bc3b95a94",
+      "method": "GET",
+      "route": "/body-metrics",
+      "status": 200,
+      "client_wall_ms": 551,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-02f36c80-b9fe-4eec-9df0-c982725ab998",
+      "method": "GET",
+      "route": "/history",
+      "status": 200,
+      "client_wall_ms": 572,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-02f36c80-b9fe-4eec-9df0-c982725ab998",
+        "timestamp": 1791308206797,
+        "route": "/api/v1/history",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 514,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-16110de0-4aeb-446e-a957-4e37ab4b769f",
+      "method": "GET",
+      "route": "/progress",
+      "status": 200,
+      "client_wall_ms": 556,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-5122530e-f611-4b46-b53f-7c3564ab9233",
+      "method": "GET",
+      "route": "/sessions/REDACTED",
+      "status": 200,
+      "client_wall_ms": 571,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-5122530e-f611-4b46-b53f-7c3564ab9233",
+        "timestamp": 1791308207925,
+        "route": "/api/v1/sessions/REDACTED",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 514,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-09fed808-a03d-4b53-ad5b-ee489189fb3c",
+      "method": "GET",
+      "route": "/body-metrics",
+      "status": 200,
+      "client_wall_ms": 573,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-09fed808-a03d-4b53-ad5b-ee489189fb3c",
+        "timestamp": 1791308208498,
+        "route": "/api/v1/body-metrics",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 515,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-1a0704e0-8ebf-467c-b950-72f6a0851b86",
+      "method": "GET",
+      "route": "/history",
+      "status": 200,
+      "client_wall_ms": 546,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-e2a1805e-a83c-4cad-ba59-1a42549f9f3a",
+      "method": "GET",
+      "route": "/progress",
+      "status": 200,
+      "client_wall_ms": 570,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-e2a1805e-a83c-4cad-ba59-1a42549f9f3a",
+        "timestamp": 1791308209614,
+        "route": "/api/v1/progress",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 515,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-5c6c1f56-8fac-47b3-8af1-2187f955feb0",
+      "method": "GET",
+      "route": "/sessions/REDACTED",
+      "status": 200,
+      "client_wall_ms": 551,
+      "upstream_requests": 4,
+      "metrics": null
+    },
+    {
+      "sample": "perf-b1214bd3-c507-4fdc-b332-27f30f2e0773",
+      "method": "GET",
+      "route": "/body-metrics",
+      "status": 200,
+      "client_wall_ms": 557,
+      "upstream_requests": 4,
+      "metrics": {
+        "sample": "perf-b1214bd3-c507-4fdc-b332-27f30f2e0773",
+        "timestamp": 1791308210732,
+        "route": "/api/v1/body-metrics",
+        "method": "GET",
+        "cpu_ms": 3,
+        "worker_wall_ms": 504,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-a4a79108-f395-46d4-bcb4-0894cd9ef58f",
+      "method": "POST",
+      "route": "/auth/refresh",
+      "status": 200,
+      "client_wall_ms": 269,
+      "upstream_requests": 1,
+      "metrics": null
+    },
+    {
+      "sample": "perf-2eefca12-2ae7-4efd-9388-de6239aa2dd7",
+      "method": "POST",
+      "route": "/auth/refresh",
+      "status": 200,
+      "client_wall_ms": 243,
+      "upstream_requests": 1,
+      "metrics": {
+        "sample": "perf-2eefca12-2ae7-4efd-9388-de6239aa2dd7",
+        "timestamp": 1791308213094,
+        "route": "/api/v1/auth/refresh",
+        "method": "POST",
+        "cpu_ms": 1,
+        "worker_wall_ms": 169,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    },
+    {
+      "sample": "perf-8010dce7-eb14-4a1a-964e-456823f703c8",
+      "method": "POST",
+      "route": "/auth/refresh",
+      "status": 200,
+      "client_wall_ms": 244,
+      "upstream_requests": 1,
+      "metrics": {
+        "sample": "perf-8010dce7-eb14-4a1a-964e-456823f703c8",
+        "timestamp": 1791308214847,
+        "route": "/api/v1/auth/refresh",
+        "method": "POST",
+        "cpu_ms": 1,
+        "worker_wall_ms": 173,
+        "outcome": "ok",
+        "version": "dc1854fd-9158-4e92-9340-1001c7d6a447"
+      }
+    }
+  ],
+  "cleanup": "disposable Auth identities deleted",
+  "summary": {
+    "POST /auth/login 200": {
+      "count": 2,
+      "cpu_min_ms": 2,
+      "cpu_max_ms": 2,
+      "worker_wall_ms": [
+        228,
+        406
+      ]
+    },
+    "POST /me/consents 200": {
+      "count": 2,
+      "cpu_min_ms": 4,
+      "cpu_max_ms": 6,
+      "worker_wall_ms": [
+        859,
+        1965
+      ]
+    },
+    "PUT /me/profile 200": {
+      "count": 5,
+      "cpu_min_ms": 3,
+      "cpu_max_ms": 6,
+      "worker_wall_ms": [
+        504,
+        816
+      ]
+    },
+    "GET /me/profile 200": {
+      "count": 4,
+      "cpu_min_ms": 2,
+      "cpu_max_ms": 3,
+      "worker_wall_ms": [
+        493,
+        875
+      ]
+    },
+    "GET /exercises 200": {
+      "count": 6,
+      "cpu_min_ms": 3,
+      "cpu_max_ms": 4,
+      "worker_wall_ms": [
+        646,
+        1051
+      ]
+    },
+    "PATCH /body-metrics/REDACTED 200": {
+      "count": 8,
+      "cpu_min_ms": 3,
+      "cpu_max_ms": 5,
+      "worker_wall_ms": [
+        483,
+        1032
+      ]
+    },
+    "PATCH /body-metrics/REDACTED 422": {
+      "count": 1,
+      "cpu_min_ms": 2,
+      "cpu_max_ms": 2,
+      "worker_wall_ms": [
+        326,
+        326
+      ]
+    },
+    "GET /body-metrics 200": {
+      "count": 5,
+      "cpu_min_ms": 3,
+      "cpu_max_ms": 3,
+      "worker_wall_ms": [
+        493,
+        801
+      ]
+    },
+    "POST /plans 201": {
+      "count": 1,
+      "cpu_min_ms": 3,
+      "cpu_max_ms": 3,
+      "worker_wall_ms": [
+        513,
+        513
+      ]
+    },
+    "PATCH /plans/REDACTED 200": {
+      "count": 1,
+      "cpu_min_ms": 4,
+      "cpu_max_ms": 4,
+      "worker_wall_ms": [
+        686,
+        686
+      ]
+    },
+    "POST /plans/REDACTED/days 201": {
+      "count": 1,
+      "cpu_min_ms": 4,
+      "cpu_max_ms": 4,
+      "worker_wall_ms": [
+        1020,
+        1020
+      ]
+    },
+    "POST /days/REDACTED/exercises 201": {
+      "count": 1,
+      "cpu_min_ms": 4,
+      "cpu_max_ms": 4,
+      "worker_wall_ms": [
+        849,
+        849
+      ]
+    },
+    "POST /sessions 201": {
+      "count": 1,
+      "cpu_min_ms": 5,
+      "cpu_max_ms": 5,
+      "worker_wall_ms": [
+        862,
+        862
+      ]
+    },
+    "GET /sessions/REDACTED 200": {
+      "count": 4,
+      "cpu_min_ms": 3,
+      "cpu_max_ms": 3,
+      "worker_wall_ms": [
+        486,
+        529
+      ]
+    },
+    "POST /session-exercises/REDACTED/sets 201": {
+      "count": 10,
+      "cpu_min_ms": 4,
+      "cpu_max_ms": 6,
+      "worker_wall_ms": [
+        833,
+        1177
+      ]
+    },
+    "POST /sessions/REDACTED/complete 201": {
+      "count": 1,
+      "cpu_min_ms": 5,
+      "cpu_max_ms": 5,
+      "worker_wall_ms": [
+        979,
+        979
+      ]
+    },
+    "GET /history 200": {
+      "count": 5,
+      "cpu_min_ms": 2,
+      "cpu_max_ms": 3,
+      "worker_wall_ms": [
+        485,
+        824
+      ]
+    },
+    "GET /progress 200": {
+      "count": 4,
+      "cpu_min_ms": 3,
+      "cpu_max_ms": 3,
+      "worker_wall_ms": [
+        501,
+        519
+      ]
+    },
+    "POST /auth/refresh 200": {
+      "count": 2,
+      "cpu_min_ms": 1,
+      "cpu_max_ms": 1,
+      "worker_wall_ms": [
+        169,
+        173
+      ]
+    }
+  },
+  "matched_count": 64
+}
